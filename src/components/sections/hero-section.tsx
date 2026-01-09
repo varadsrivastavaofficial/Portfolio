@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const FRAME_COUNT = 148;
+const FRAME_COUNT = 96;
 const FRAME_URL_PREFIX =
   'https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Portfolio/frame_';
 
@@ -98,7 +98,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className="relative h-[300vh]">
+    <section id="hero" ref={heroRef} className="relative h-[400vh]">
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         <canvas
           ref={canvasRef}
