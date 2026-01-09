@@ -11,36 +11,22 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS_DATA = {
-  Finance: [
-    'Financial Modeling',
-    'Valuation Analysis',
-    'Portfolio Management',
-    'Equity Research',
-    'Risk Assessment',
+  Programming: [
+    'Python (Pandas, NumPy, Matplotlib, Scikit, Yfinance, QuantLib)',
+    'C/C++',
+    'Java',
   ],
-  Risk: [
-    'Market Risk',
-    'Credit Risk',
-    'Operational Risk',
+  'Finance Tools': [
+    'MS Excel (Advanced, Financial Modeling, Pivot Tables)',
     'Quantitative Analysis',
-    'Regulatory Compliance',
   ],
-  Python: [
-    'Pandas',
-    'NumPy',
-    'Matplotlib',
-    'Scikit-learn',
-    'Django',
-    'Flask',
+  'Graphic Design': [
+    'Canva',
+    'Logo Design',
+    'Merch & Template Design',
+    'Video Editing (Adobe AE)',
   ],
-  'Data Tools': [
-    'SQL',
-    'Tableau',
-    'Power BI',
-    'Excel',
-    'R',
-    'Google Analytics',
-  ],
+  Others: ['GitHub', 'LaTeX'],
 };
 
 const [
@@ -52,6 +38,10 @@ const [
   hobby3,
   education1,
   volunteering1,
+  education2,
+  education3,
+  volunteering2,
+  volunteering3,
 ] = PlaceHolderImages;
 
 export type Project = {
@@ -67,41 +57,27 @@ export type Project = {
 
 export const PROJECTS_DATA: Project[] = [
   {
-    title: 'Automated Portfolio Risk Analyzer',
+    title: 'Fundamental Analysis of Stocks',
     description:
-      'A Python-based tool for real-time risk assessment of equity portfolios.',
+      'Performed equity valuation using Football Field Chart Analysis and financial metrics (P/E, EV/EBITDA, DCF).',
     problem:
-      'Traders needed a way to quickly assess the Value at Risk (VaR) and other risk metrics for their portfolios without manual calculations in Excel.',
-    tools: ['Python', 'Pandas', 'NumPy', 'SciPy', 'Matplotlib'],
+      'Needed to perform comprehensive valuation on a list of stocks to identify investment opportunities.',
+    tools: ['Python', 'Pandas', 'Yfinance'],
     outcome:
-      'Developed a script that reduced the time for daily risk reporting from 1 hour to under 5 minutes. The tool provided historical simulation and Monte Carlo VaR estimations.',
+      'Developed a robust valuation model and visualized data to support investment decisions. The project source is available on GitHub.',
     image: project1,
-    liveUrl: '#',
+    sourceUrl: 'https://github.com', // Replace with your actual GitHub link
   },
   {
-    title: 'DCF Valuation Model Dashboard',
+    title: 'Netflix Viewing Trends Analysis',
     description:
-      'An interactive web dashboard for performing Discounted Cash Flow (DCF) analysis on public companies.',
+      'Conducted data analysis on Netflix viewing trends to identify genre popularity and content release patterns.',
     problem:
-      'Financial analysts required a more dynamic and shareable way to present their valuation models than static spreadsheets.',
-    tools: ['Flask', 'Plotly Dash', 'Pandas', 'yfinance API'],
+      'Understanding content performance and viewer engagement on the Netflix platform.',
+    tools: ['Excel', 'Python'],
     outcome:
-      'Created a web application that allows users to input their assumptions and instantly see the impact on a company’s valuation and generate PDF reports.',
+      'Applied statistical tools and visualization techniques to derive insights and present findings on content strategy.',
     image: project2,
-    sourceUrl: '#',
-  },
-  {
-    title: 'Credit Score Prediction Model',
-    description:
-      'A machine learning model to predict credit default probability based on customer data.',
-    problem:
-      'A financial institution wanted to improve its loan approval process by more accurately identifying high-risk applicants.',
-    tools: ['Python', 'Scikit-learn', 'TensorFlow', 'SQL', 'Tableau'],
-    outcome:
-      'The model achieved an 85% accuracy rate, improving upon the existing logistic regression model by 12%. Integrated into a Tableau dashboard for loan officers.',
-    image: project3,
-    liveUrl: '#',
-    sourceUrl: '#',
   },
 ];
 
@@ -113,21 +89,15 @@ export type Hobby = {
 
 export const HOBBIES_DATA: Hobby[] = [
   {
-    title: 'Karate',
+    title: 'Graphic Design',
     description:
-      'A discipline of mind and body, karate teaches me focus and perseverance. It is a constant pursuit of self-improvement and control.',
+      'I create visually compelling designs for logos, merchandise, and templates using tools like Canva.',
     image: hobby1,
-  },
-  {
-    title: 'Boxing',
-    description:
-      'The sweet science of boxing is a test of strategy, endurance, and heart. It keeps me sharp, agile, and resilient under pressure.',
-    image: hobby2,
   },
   {
     title: 'Video Editing',
     description:
-      'I enjoy telling stories through video, combining visuals and sound to create compelling narratives. It is my creative outlet to transform ideas into motion.',
+      'I enjoy telling stories through video, combining visuals and sound to create compelling narratives using Adobe After Effects.',
     image: hobby3,
   },
 ];
@@ -140,10 +110,20 @@ export type Education = {
 
 export const EDUCATION_DATA: Education[] = [
   {
-    title: 'University of Example',
+    title: 'B.S. Major, Economics',
     description:
-      'Master of Science in Financial Engineering, focusing on quantitative analysis and risk management. Graduated with honors.',
+      'Indian Institute of Science Education and Research, Bhopal (2024-Present, CGPA: 7.83)',
     image: education1,
+  },
+  {
+    title: 'Senior Secondary',
+    description: 'CISCE Board (2023, 95.50%)',
+    image: education2,
+  },
+  {
+    title: 'Secondary',
+    description: 'CISCE Board (2021, 96.60%)',
+    image: education3,
   },
 ];
 
@@ -155,9 +135,20 @@ export type Volunteering = {
 
 export const VOLUNTEERING_DATA: Volunteering[] = [
   {
-    title: 'Financial Literacy Coach',
-    description:
-      'Volunteered to teach basic financial concepts to underprivileged youth, empowering them with skills for a better future.',
+    title: 'Media Head, Computing and Networking Council, IISER-B',
+    description: 'Responsible for managing media and communications for the council (Oct. 2025 - Present).',
     image: volunteering1,
+  },
+  {
+    title: 'Vice President, LPC Computer Club, LPC',
+    description:
+      'Led club activities and initiatives (Mar. 2022 - Jun. 2023).',
+    image: volunteering2,
+  },
+  {
+    title: 'Secretary, Calculathon (Mathematics Club), LPC',
+    description:
+      'Organized and managed events for the mathematics club (Mar. 2022 - Jun. 2023).',
+    image: volunteering3,
   },
 ];

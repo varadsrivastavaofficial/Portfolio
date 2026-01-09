@@ -33,14 +33,13 @@ export function AboutSection() {
                 About Me
               </h2>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
-                I am a dedicated and analytical finance enthusiast with a strong
-                academic foundation in financial principles and risk management.
-                My passion lies in leveraging quantitative tools and
-                data-driven insights to solve complex financial problems.
-                Through academic projects and self-study, I have developed
-                proficiency in financial modeling, portfolio analysis, and
-                programming with Python. I am eager to apply my skills and grow
-                in a dynamic, professional environment.
+                An analytical and detail-oriented undergraduate in Economics with
+                strong quantitative, programming, and research skills. A
+                philomath, experienced in financial data analysis, statistical
+                modeling, and Excel-based analytics. Passionate about
+                investment research, risk analysis, and data-driven
+                decision-making. Proven ability to work collaboratively and meet
+                deadlines in fast-paced environments.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <Button
