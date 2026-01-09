@@ -31,7 +31,7 @@ export default function HobbiesPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {HOBBIES_DATA.map((hobby) => (
               <Reveal key={hobby.title}>
-                <Card className="flex h-full flex-col overflow-hidden border-border/50 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                <Card className="group flex h-full flex-col overflow-hidden border-border/50 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
                   <CardHeader>
                     <div className="aspect-[3/2] relative overflow-hidden rounded-lg border">
                       <Image

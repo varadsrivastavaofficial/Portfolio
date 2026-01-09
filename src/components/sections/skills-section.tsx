@@ -27,7 +27,7 @@ export function SkillsSection() {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {Object.entries(SKILLS_DATA).map(([category, skills]) => (
           <Reveal key={category}>
-            <Card className="h-full border-border/50 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+            <Card className="h-full border-border/50 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="font-headline text-xl text-primary">
                   {category}

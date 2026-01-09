@@ -16,7 +16,7 @@ import { Reveal } from '@/components/shared/reveal';
 function ProjectCard({ project }: { project: Project }) {
   return (
     <Reveal>
-      <Card className="flex h-full flex-col overflow-hidden border-border/50 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+      <Card className="group flex h-full flex-col overflow-hidden border-border/50 bg-card transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
         <CardHeader>
           <div className="aspect-[3/2] relative overflow-hidden rounded-lg border">
             <Image
@@ -85,16 +85,18 @@ export function ProjectsSection() {
     >
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2
-            id="projects-heading"
-            className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl"
-          >
-            Projects
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            A selection of projects demonstrating my skills in financial
-            analysis, modeling, and software development.
-          </p>
+          <Reveal>
+            <h2
+              id="projects-heading"
+              className="font-headline text-3xl font-bold tracking-tight text-primary sm:text-4xl"
+            >
+              Projects
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              A selection of projects demonstrating my skills in financial
+              analysis, modeling, and software development.
+            </p>
+          </Reveal>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
