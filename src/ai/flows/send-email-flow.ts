@@ -22,6 +22,7 @@ if (process.env.SENDGRID_API_KEY) {
 const SendEmailInputSchema = z.object({
   name: z.string().describe('The name of the person sending the message.'),
   email: z.string().email().describe('The email address of the sender.'),
+  phone: z.string().describe('The phone number of the sender.'),
   subject: z.string().describe('The subject of the message.'),
   message: z.string().describe('The content of the message.'),
 });
@@ -100,6 +101,7 @@ Format the output as a JSON object with 'subject' and 'htmlBody' keys.
 
 User Name: {{{name}}}
 User Email: {{{email}}}
+User Phone: {{{phone}}}
 Subject: {{{subject}}}
 Message:
 {{{message}}}

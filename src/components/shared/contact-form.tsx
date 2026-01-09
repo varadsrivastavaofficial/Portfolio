@@ -26,6 +26,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: 'Please enter a valid email address.',
   }),
+  phone: z.string().min(10, {
+    message: 'Please enter a valid phone number.',
+  }),
   subject: z.string().min(5, {
     message: 'Subject must be at least 5 characters.',
   }),
@@ -43,6 +46,7 @@ export function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
+      phone: '',
       subject: '',
       message: '',
     },
@@ -73,6 +77,8 @@ export function ContactForm() {
     }
   }
 
+  const RequiredIndicator = () => <span className="text-primary">*</span>;
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="mt-10 space-y-8">
@@ -81,7 +87,7 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Name <RequiredIndicator /></FormLabel>
               <FormControl>
                 <Input placeholder="Your Name" {...field} />
               </FormControl>
@@ -94,9 +100,22 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>Email <RequiredIndicator /></FormLabel>
               <FormControl>
                 <Input placeholder="your.email@example.com" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Phone Number <RequiredIndicator /></FormLabel>
+              <FormControl>
+                <Input placeholder="Your Phone Number" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -107,7 +126,7 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>Subject <RequiredIndicator /></FormLabel>
               <FormControl>
                 <Input placeholder="Regarding an opportunity..." {...field} />
               </FormControl>
@@ -120,7 +139,7 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Message <RequiredIndicator /></FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Tell me a little more..."
