@@ -42,6 +42,7 @@ const [
   education3,
   volunteering2,
   volunteering3,
+  hobby4,
 ] = PlaceHolderImages;
 
 export type Project = {
@@ -89,10 +90,16 @@ export type Hobby = {
 
 export const HOBBIES_DATA: Hobby[] = [
   {
-    title: 'Graphic Design',
+    title: 'Karate',
     description:
-      'I create visually compelling designs for logos, merchandise, and templates using tools like Canva.',
-    image: hobby1,
+      'I am a dedicated martial artist, training in Karate to cultivate discipline, focus, and physical fitness.',
+    image: hobby4,
+  },
+  {
+    title: 'Boxing',
+    description:
+      'I practice boxing to improve my reflexes, conditioning, and strategic thinking in a high-intensity sport.',
+    image: hobby2,
   },
   {
     title: 'Video Editing',
