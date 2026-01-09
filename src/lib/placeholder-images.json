@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "Abstract financial chart",
+      "imageUrl": "https://images.unsplash.com/photo-1723785735443-16ffd373f398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmaW5hbmNlJTIwY2hhcnR8ZW58MHx8fHwxNzY3OTIxMjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finance chart"
+    },
+    {
+      "id": "project-2",
+      "description": "Modern office dashboard",
+      "imageUrl": "https://images.unsplash.com/photo-1691725909676-105654d24649?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY3OTAxMjA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard interface"
+    },
+    {
+      "id": "project-3",
+      "description": "Data and code on screen",
+      "imageUrl": "https://images.unsplash.com/photo-1763568258226-3e3f67a6577e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2RlJTIwZGF0YXxlbnwwfHx8fDE3Njc5MzkwODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code data"
+    }
+  ]
 }
