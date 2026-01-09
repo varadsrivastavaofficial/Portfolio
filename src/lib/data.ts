@@ -11,10 +11,13 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS_DATA = {
-  Programming: [
-    'Python (Pandas, NumPy, Matplotlib, Scikit, Yfinance, QuantLib)',
-    'C/C++',
-    'Java',
+  Python: [
+    'Pandas',
+    'NumPy',
+    'Matplotlib',
+    'Scikit',
+    'Yfinance',
+    'QuantLib',
   ],
   'Finance Tools': [
     'MS Excel (Advanced, Financial Modeling, Pivot Tables)',
@@ -26,7 +29,7 @@ export const SKILLS_DATA = {
     'Merch & Template Design',
     'Video Editing (Adobe AE)',
   ],
-  Others: ['GitHub', 'LaTeX'],
+  Others: ['GitHub', 'LaTeX', 'C/C++', 'Java'],
 };
 
 const [
