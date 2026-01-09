@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Linkedin } from 'lucide-react';
 import {
   Accordion,
@@ -6,7 +7,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Logo } from './logo';
 
 const socialLinks = [
   {
@@ -28,7 +28,13 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Logo className="h-8 w-8 text-primary" />
+              <Image
+                src="https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Logo%20Varad/299027867_734158458020591_4062664687879645484_n-removebg-preview.png"
+                alt="Varad Srivastava Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
               <span className="font-headline text-xl font-bold">
                 Varad Srivastava
               </span>
@@ -36,6 +42,7 @@ export function Footer() {
             <p className="text-muted-foreground">
               Financial Enthusiast & Analyst
             </p>
+            <a href="mailto:varadsrivastavaofficial@gmail.com" className="text-sm text-primary hover:underline">varadsrivastavaofficial@gmail.com</a>
             <div className="flex items-center gap-4 mt-4">
               {socialLinks.map(({ href, icon: Icon, label }) => (
                 <Link
