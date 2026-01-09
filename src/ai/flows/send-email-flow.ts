@@ -9,7 +9,6 @@
 
 import { ai } from '@/ai/genkit';
 import { z } from 'zod';
-import { defineDotprompt } from 'genkit/dotprompt';
 import mail from '@sendgrid/mail';
 
 const RECIPIENT_EMAIL = 'varadsrivastavaofficial@gmail.com';
@@ -79,9 +78,8 @@ const emailSenderTool = ai.defineTool(
 
 
 // Define the prompt for formatting the email
-const emailFormattingPrompt = defineDotprompt({
+const emailFormattingPrompt = ai.definePrompt({
   name: 'emailFormattingPrompt',
-  model: 'googleai/gemini-2.5-flash',
   input: {
     schema: SendEmailInputSchema,
   },
@@ -117,9 +115,7 @@ const sendEmailFlow = ai.defineFlow(
   },
   async (input) => {
     // 1. Format the email content using an LLM
-    const { output: formattedEmail } = await emailFormattingPrompt.generate({
-      input,
-    });
+    const { output: formattedEmail } = await emailFormattingPrompt(input);
 
     if (!formattedEmail) {
       return {
