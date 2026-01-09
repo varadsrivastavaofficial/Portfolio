@@ -62,22 +62,6 @@ export function Footer() {
                   responsive, and recruiter-friendly.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Disclaimer</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground space-y-2">
-                  <p>
-                    All financial analysis presented on this site is for
-                    educational and demonstrative purposes only.
-                  </p>
-                  <p>
-                    Fair value estimates and other analytical outputs may differ
-                    from professional reports due to the reliance on free/public
-                    APIs and open analyst reports, not paid or proprietary
-                    databases. This content does not constitute financial
-                    advice.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger>Terms & Conditions</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
