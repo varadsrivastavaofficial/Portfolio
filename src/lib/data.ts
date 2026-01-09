@@ -5,6 +5,7 @@ export const NAV_LINKS = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Hobbies', href: '#hobbies' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -41,7 +42,14 @@ export const SKILLS_DATA = {
   ],
 };
 
-const [project1, project2, project3] = PlaceHolderImages;
+const [
+  project1,
+  project2,
+  project3,
+  hobby1,
+  hobby2,
+  hobby3,
+] = PlaceHolderImages;
 
 export type Project = {
   title: string;
@@ -91,5 +99,32 @@ export const PROJECTS_DATA: Project[] = [
     image: project3,
     liveUrl: '#',
     sourceUrl: '#',
+  },
+];
+
+export type Hobby = {
+  title: string;
+  description: string;
+  image: ImagePlaceholder;
+};
+
+export const HOBBIES_DATA: Hobby[] = [
+  {
+    title: 'Karate',
+    description:
+      'A discipline of mind and body, karate teaches me focus and perseverance. It is a constant pursuit of self-improvement and control.',
+    image: hobby1,
+  },
+  {
+    title: 'Boxing',
+    description:
+      'The sweet science of boxing is a test of strategy, endurance, and heart. It keeps me sharp, agile, and resilient under pressure.',
+    image: hobby2,
+  },
+  {
+    title: 'Video Editing',
+    description:
+      'I enjoy telling stories through video, combining visuals and sound to create compelling narratives. It is my creative outlet to transform ideas into motion.',
+    image: hobby3,
   },
 ];

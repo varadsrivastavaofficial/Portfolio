@@ -3,6 +3,7 @@ import { ContactSection } from '@/components/sections/contact-section';
 import { HeroSection } from '@/components/sections/hero-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
 import { SkillsSection } from '@/components/sections/skills-section';
+import { HobbiesSection } from '@/components/sections/hobbies-section';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 
@@ -15,6 +16,7 @@ export default function Home() {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
+        <HobbiesSection />
         <ContactSection />
       </main>
       <Footer />

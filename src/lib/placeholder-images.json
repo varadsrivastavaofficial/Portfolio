@@ -17,6 +17,24 @@
       "description": "Data and code on screen",
       "imageUrl": "https://images.unsplash.com/photo-1763568258226-3e3f67a6577e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2RlJTIwZGF0YXxlbnwwfHx8fDE3Njc5MzkwODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "code data"
+    },
+    {
+      "id": "hobby-1",
+      "description": "A person practicing a karate kick",
+      "imageUrl": "https://images.unsplash.com/photo-1608583252022-09323426b8b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrYXJhdGUlMjBraWNrfGVufDB8fHx8MTc2Nzg3NTE2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "karate kick"
+    },
+    {
+      "id": "hobby-2",
+      "description": "A pair of boxing gloves",
+      "imageUrl": "https://images.unsplash.com/photo-1669500635486-53b02ec7919b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxib3hpbmclMjBnbG92ZXN8ZW58MHx8fHwxNzY3ODY5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "boxing gloves"
+    },
+    {
+      "id": "hobby-3",
+      "description": "Video editing software on a computer screen",
+      "imageUrl": "https://images.unsplash.com/photo-1605826832916-d0ea9d6fe71e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2aWRlbyUyMGVkaXRpbmd8ZW58MHx8fHwxNzY3OTAzNTI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "video editing"
     }
   ]
 }
