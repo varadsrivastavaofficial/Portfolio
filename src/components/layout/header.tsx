@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { NAV_LINKS } from '@/lib/data';
-import { Logo } from './logo';
 import { Button } from '../ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { Menu } from 'lucide-react';
@@ -72,7 +72,13 @@ export function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2" aria-label="Home">
-          <Logo className="h-8 w-8 text-primary" />
+          <Image
+            src="https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Logo%20Varad/299027867_734158458020591_4062664687879645484_n-removebg-preview.png"
+            alt="Varad Srivastava Logo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
           <span className="hidden sm:inline font-headline text-xl font-bold">
             Varad Srivastava
           </span>
