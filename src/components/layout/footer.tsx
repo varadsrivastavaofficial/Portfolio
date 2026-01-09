@@ -1,3 +1,6 @@
+
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Instagram, Linkedin } from 'lucide-react';
@@ -7,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { useEffect, useState } from 'react';
 
 const socialLinks = [
   {
@@ -22,6 +26,12 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-card text-card-foreground border-t">
       <div className="container mx-auto px-4 py-12">
@@ -83,7 +93,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} Varad Srivastava. All Rights
+            &copy; {year} Varad Srivastava. All Rights
             Reserved.
           </p>
           <p>Created by Varad Srivastava</p>
