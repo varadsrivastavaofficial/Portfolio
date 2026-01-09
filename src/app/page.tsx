@@ -6,6 +6,7 @@ import { SkillsSection } from '@/components/sections/skills-section';
 import { HobbiesSection } from '@/components/sections/hobbies-section';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { ResumeSection } from '@/components/sections/resume-section';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <ResumeSection />
         <ProjectsSection />
         <HobbiesSection />
         <ContactSection />

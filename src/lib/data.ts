@@ -4,6 +4,7 @@ import { PlaceHolderImages } from './placeholder-images';
 export const NAV_LINKS = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
+  { name: 'Resume', href: '#resume' },
   { name: 'Projects', href: '#projects' },
   { name: 'Hobbies', href: '#hobbies' },
   { name: 'Contact', href: '#contact' },
