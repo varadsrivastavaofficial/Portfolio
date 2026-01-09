@@ -50,6 +50,8 @@ const [
   hobby1,
   hobby2,
   hobby3,
+  education1,
+  volunteering1,
 ] = PlaceHolderImages;
 
 export type Project = {
@@ -127,5 +129,35 @@ export const HOBBIES_DATA: Hobby[] = [
     description:
       'I enjoy telling stories through video, combining visuals and sound to create compelling narratives. It is my creative outlet to transform ideas into motion.',
     image: hobby3,
+  },
+];
+
+export type Education = {
+  title: string;
+  description: string;
+  image: ImagePlaceholder;
+};
+
+export const EDUCATION_DATA: Education[] = [
+  {
+    title: 'University of Example',
+    description:
+      'Master of Science in Financial Engineering, focusing on quantitative analysis and risk management. Graduated with honors.',
+    image: education1,
+  },
+];
+
+export type Volunteering = {
+  title: string;
+  description: string;
+  image: ImagePlaceholder;
+};
+
+export const VOLUNTEERING_DATA: Volunteering[] = [
+  {
+    title: 'Financial Literacy Coach',
+    description:
+      'Volunteered to teach basic financial concepts to underprivileged youth, empowering them with skills for a better future.',
+    image: volunteering1,
   },
 ];
