@@ -15,7 +15,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isHomePage = pathname === '/studio' || pathname === '/';
+  const isHomePage = pathname === '/Portfolio' || pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +51,7 @@ export function Header() {
     }
   }, [isHomePage]);
   
-  const basePath = '/studio';
+  const basePath = '/Portfolio';
 
   const navLinks = (
     <>
