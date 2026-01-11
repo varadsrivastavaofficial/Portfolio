@@ -1,6 +1,7 @@
-import { Instagram, Linkedin } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { Reveal } from '@/components/shared/reveal';
-import { ContactForm } from '@/components/shared/contact-form';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function ContactSection() {
   return (
@@ -21,10 +22,17 @@ export function ContactSection() {
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               I&apos;m currently seeking internship opportunities and am open to
               connecting with professionals in the industry. Feel free to reach
-              out.
+              out via email.
             </p>
+            <div className="mt-10">
+                <Button asChild size="lg">
+                    <Link href="mailto:varadsrivastavaofficial@gmail.com">
+                        <Mail className="mr-2 h-5 w-5" />
+                        varadsrivastavaofficial@gmail.com
+                    </Link>
+                </Button>
+            </div>
           </div>
-          <ContactForm />
         </div>
       </Reveal>
     </section>
