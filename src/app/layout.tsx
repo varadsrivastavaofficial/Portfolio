@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: 'Varad Srivastava | Financial Enthusiast',
   description:
     'Personal portfolio of Varad Srivastava, showcasing academic and professional work in finance, risk, Python, and data analysis.',
+  icons: {
+    icon: logoUrl,
+    apple: logoUrl,
+  },
   openGraph: {
     title: 'Varad Srivastava | Financial Enthusiast',
     description:
@@ -35,8 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        <link rel="icon" href={logoUrl} sizes="any" type="image/png" />
-        <link rel="apple-touch-icon" href={logoUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
