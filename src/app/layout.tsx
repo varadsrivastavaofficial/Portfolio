@@ -1,8 +1,9 @@
-
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 import { cn } from '@/lib/utils';
+
+const logoUrl = 'https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Logo%20Varad/299027867_734158458020591_4062664687879645484_n-removebg-preview.png';
 
 export const metadata: Metadata = {
   title: 'Varad Srivastava | Financial Enthusiast',
@@ -34,6 +35,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        <link rel="icon" href={logoUrl} sizes="any" type="image/png" />
+        <link rel="apple-touch-icon" href={logoUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
