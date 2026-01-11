@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { NAV_LINKS } from '@/lib/data';
 import { Button } from '../ui/button';
@@ -13,51 +14,66 @@ export function Header() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/studio' || pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: '-30% 0px -70% 0px' }
-    );
+    if (isHomePage) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(entry.target.id);
+            }
+          });
+        },
+        { rootMargin: '-30% 0px -70% 0px' }
+      );
 
-    const sections = document.querySelectorAll('section[id]');
-    sections.forEach((section) => observer.observe(section));
-    window.addEventListener('scroll', handleScroll);
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach((section) => observer.observe(section));
+      window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      return () => {
+        sections.forEach((section) => observer.unobserve(section));
+        window.removeEventListener('scroll', handleScroll);
+      };
+    } else {
+        window.addEventListener('scroll', handleScroll);
+        // On other pages, we don't need the intersection observer.
+        // We can set a default or clear active section.
+        setActiveSection('');
+        return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [isHomePage]);
+  
+  const basePath = '/studio';
 
   const navLinks = (
     <>
-      {NAV_LINKS.map((link) => (
-        <a
-          key={link.href}
-          href={link.href}
-          onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
-          className={cn(
-            'relative px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-primary',
-            'after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-primary after:transition-transform after:duration-300',
-            activeSection === link.href.substring(1)
-              ? 'text-primary after:scale-x-100'
-              : 'hover:after:scale-x-50'
-          )}
-        >
-          {link.name}
-        </a>
-      ))}
+      {NAV_LINKS.map((link) => {
+        const fullHref = isHomePage ? link.href : `${basePath}/${link.href}`;
+        return (
+            <a
+            key={link.href}
+            href={fullHref}
+            onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
+            className={cn(
+                'relative px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-primary',
+                'after:absolute after:bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-primary after:transition-transform after:duration-300',
+                activeSection === link.href.substring(1)
+                ? 'text-primary after:scale-x-100'
+                : 'hover:after:scale-x-50'
+            )}
+            >
+            {link.name}
+            </a>
+        );
+      })}
     </>
   );
 
