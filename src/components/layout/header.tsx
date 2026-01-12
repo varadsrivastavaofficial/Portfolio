@@ -89,6 +89,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href={basePath || '/'} className="flex items-center gap-2" aria-label="Home">
+
           <Image
             src="https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Logo%20Varad/299027867_734158458020591_4062664687879645484_n-removebg-preview.png"
             alt="Varad Srivastava Logo"
