@@ -122,17 +122,17 @@ export const EDUCATION_DATA: Education[] = [
   {
     title: 'B.S. Major, Economics',
     description:
-      'Indian Institute of Science Education and Research, Bhopal (2024-Present, CGPA: 7.83)',
+      'Indian Institute of Science Education and Research, Bhopal (2024-2028)',
     image: education1,
   },
   {
-    title: 'Senior Secondary',
-    description: 'CISCE Board (2023, 95.50%)',
+    title: 'Intermediate Class XII',
+    description: 'Lucknow Public College, CISCE Board (2023, 95.50%)',
     image: education2,
   },
   {
-    title: 'Secondary',
-    description: 'CISCE Board (2021, 96.60%)',
+    title: 'Matriculation Class X',
+    description: 'Lucknow Public College, CISCE Board (2021, 96.60%)',
     image: education3,
   },
 ];
