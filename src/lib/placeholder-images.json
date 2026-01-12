@@ -38,9 +38,9 @@
     },
     {
       "id": "education-1",
-      "description": "University campus building",
-      "imageUrl": "https://images.unsplash.com/photo-1608832633049-6d6e51f8dc99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1bml2ZXJzaXR5JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzY3ODc2NTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "university building"
+      "description": "IISERB campus",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/College/1551849381phpnCJWnF%20(1).jpeg",
+      "imageHint": "university campus"
     },
     {
       "id": "volunteering-1",
@@ -50,15 +50,15 @@
     },
     {
       "id": "education-2",
-      "description": "High school classroom",
-      "imageUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "school classroom"
+      "description": "LPC School Building",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/School/564599380_1282660880549386_2972099185356676857_n%20(1).jpg",
+      "imageHint": "school building"
     },
     {
       "id": "education-3",
-      "description": "School books and supplies",
-      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "school books"
+      "description": "LPC School Building",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/School/564599380_1282660880549386_2972099185356676857_n%20(1).jpg",
+      "imageHint": "school building"
     },
     {
       "id": "volunteering-2",
