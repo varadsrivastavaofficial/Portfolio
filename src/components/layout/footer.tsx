@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Linkedin } from 'lucide-react';
+import { Instagram, Linkedin, Github } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -22,6 +22,11 @@ const socialLinks = [
     href: 'https://www.instagram.com/varadsrivastav/',
     icon: Instagram,
     label: 'Instagram',
+  },
+  {
+    href: 'https://github.com/varadsrivastavaofficial',
+    icon: Github,
+    label: 'GitHub',
   },
 ];
 
