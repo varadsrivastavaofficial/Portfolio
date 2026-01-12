@@ -70,7 +70,7 @@ export const PROJECTS_DATA: Project[] = [
     outcome:
       'Developed a robust valuation model and visualized data to support investment decisions. The project source is available on GitHub.',
     image: project1,
-    sourceUrl: 'https://github.com', // Replace with your actual GitHub link
+    sourceUrl: 'https://github.com/varadsrivastavaofficial/Investing-_Portfolio_Project', // Replace with your actual GitHub link
   },
   {
     title: 'Netflix Viewing Trends Analysis',
@@ -95,17 +95,17 @@ export const HOBBIES_DATA: Hobby[] = [
   {
     title: 'Karate',
     description:
-      'I am a dedicated martial artist, training in Karate to cultivate discipline, focus, and physical fitness.',
+      'Dedicated towards martial arts, training in Karate to cultivate discipline, focus, and physical fitness.',
     image: hobby4,
   },
   {
     title: 'Boxing',
     description:
-      'I practice boxing to improve my reflexes, conditioning, and strategic thinking in a high-intensity sport.',
+      'Practicing boxing to improve my reflexes, conditioning, and strategic thinking in a high-intensity sport.',
     image: hobby2,
   },
   {
-    title: 'Video Editing',
+    title: 'Youtuber',
     description:
       'I enjoy telling stories through video, combining visuals and sound to create compelling narratives using Adobe After Effects.',
     image: hobby3,
