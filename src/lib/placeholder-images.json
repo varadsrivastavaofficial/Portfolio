@@ -75,7 +75,7 @@
     {
       "id": "hobby-4",
       "description": "A person practicing a karate kick",
-      "imageUrl": "https://images.unsplash.com/photo-1593345479621-592dc168696e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Karate/7c11bec1-42b3-441f-bb95-63d3c8afdc68.jpg",
       "imageHint": "karate kick"
     }
   ]
