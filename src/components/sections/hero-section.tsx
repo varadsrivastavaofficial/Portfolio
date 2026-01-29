@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { SplashCursor } from '@/components/shared/splash-cursor';
 
 const FRAME_COUNT = 96;
 const FRAME_URL_PREFIX =
@@ -100,7 +99,6 @@ export function HeroSection() {
 
   return (
     <section id="hero" ref={heroRef} className="relative h-[400vh]">
-      <SplashCursor />
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         <canvas
           ref={canvasRef}
@@ -148,3 +146,4 @@ export function HeroSection() {
     </section>
   );
 }
+
