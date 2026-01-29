@@ -16,7 +16,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isHomePage = pathname === '/Portfolio' || pathname === '/';
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,12 +52,10 @@ export function Header() {
     }
   }, [isHomePage]);
   
-  const basePath = '/Portfolio';
-
   const navLinks = (
     <>
       {NAV_LINKS.map((link) => {
-        const fullHref = isHomePage ? link.href : `${basePath}/${link.href}`;
+        const fullHref = isHomePage ? link.href : `/${link.href}`;
         return (
             <a
             key={link.href}
