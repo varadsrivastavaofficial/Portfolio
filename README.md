@@ -1,5 +1,3 @@
-# Firebase Studio
+This is my (Varad Srivastava) Portfolio.
+This is first project made via Vibe Coding on Firebase.
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
