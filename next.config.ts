@@ -1,17 +1,43 @@
+
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/Portfolio',
-  assetPrefix: '/Portfolio/',
-  images: {
-    unoptimized: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
+  experimental: {
+    serverActions: {
+      allowedOrigins: [
+        '*.cluster-xpmcxs2fjnhg6xvn446ubtgpio.cloudworkstations.dev',
+        'localhost:9002',
+      ],
+    },
   },
 };
 
