@@ -28,9 +28,13 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          GITHUB_ACTIONS: 'true'
+          NEXT_PUBLIC_TWELVE_DATA_API_KEY: ${{ secrets.NEXT_PUBLIC_TWELVE_DATA_API_KEY }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+

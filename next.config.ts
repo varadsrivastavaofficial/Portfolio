@@ -1,7 +1,11 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
+
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
 
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: isGitHubPages ? '/Portfolio' : '',
+  trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -29,8 +33,15 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'mqvzczviyjdwmankwpyy.supabase.co',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
 
 export default nextConfig;
+
