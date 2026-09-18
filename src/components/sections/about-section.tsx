@@ -2,7 +2,7 @@ import { Reveal } from '@/components/shared/reveal';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, GraduationCap, HeartHandshake, Award, TrendingUp, ShieldCheck, Globe } from 'lucide-react';
+import { ArrowRight, GraduationCap, Award, TrendingUp, ShieldCheck, Globe } from 'lucide-react';
 import { CERTIFICATIONS_DATA, LANGUAGES_DATA } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 
@@ -58,9 +58,8 @@ export function AboutSection() {
                   Interested in risk analysis, investment research, and quantitative finance, with additional strengths in data analysis, visualisation, and creative design.
                 </p>
 
-
                 {/* Quick Highlights Badges */}
-                <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-card/60 border border-border/40 text-center lg:text-left">
                     <GraduationCap className="h-5 w-5 text-primary mb-1 mx-auto lg:mx-0" />
                     <p className="font-bold text-foreground text-sm">IISER Bhopal</p>
@@ -71,12 +70,6 @@ export function AboutSection() {
                     <Award className="h-5 w-5 text-primary mb-1 mx-auto lg:mx-0" />
                     <p className="font-bold text-foreground text-sm">95.50% & 96.60%</p>
                     <p className="text-xs text-muted-foreground">Class XII & X (CISCE Honors)</p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-card/60 border border-border/40 text-center lg:text-left col-span-2 sm:col-span-1">
-                    <HeartHandshake className="h-5 w-5 text-primary mb-1 mx-auto lg:mx-0" />
-                    <p className="font-bold text-foreground text-sm">Media Head</p>
-                    <p className="text-xs text-muted-foreground">CNC, IISER Bhopal</p>
                   </div>
                 </div>
 
