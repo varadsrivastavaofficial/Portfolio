@@ -11,7 +11,7 @@ export function HobbiesSection() {
   return (
     <section
       id="hobbies"
-      className="container mx-auto py-24 sm:py-32 px-4"
+      className="container mx-auto py-24 sm:py-32 px-4 w-full max-w-full"
       aria-labelledby="hobbies-heading"
     >
       <div className="max-w-3xl mx-auto text-center mb-16">

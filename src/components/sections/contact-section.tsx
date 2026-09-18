@@ -30,7 +30,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative container mx-auto py-24 sm:py-32 px-4"
+      className="relative container mx-auto py-24 sm:py-32 px-4 w-full max-w-full overflow-x-hidden"
       aria-labelledby="contact-heading"
     >
       <div className="max-w-6xl mx-auto">

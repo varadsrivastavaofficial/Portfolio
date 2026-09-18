@@ -108,7 +108,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 <BookOpen className="h-3.5 w-3.5 mr-1.5" /> Case Study
               </Button>
             </DialogTrigger>
-            <DialogContent className="max-w-2xl bg-card border-border/70 p-6 sm:p-8 font-serif">
+            <DialogContent className="max-w-[95vw] sm:max-w-2xl bg-card border-border/70 p-4 sm:p-8 font-serif">
               <DialogHeader>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest w-fit mb-2">
                   <Layers className="h-3.5 w-3.5" /> {project.category} Deep Dive
@@ -221,7 +221,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative bg-background/50 py-24 sm:py-32"
+      className="relative bg-background/50 py-24 sm:py-32 w-full max-w-full overflow-x-hidden"
       aria-labelledby="projects-heading"
     >
       <div className="container mx-auto px-4 sm:px-6">

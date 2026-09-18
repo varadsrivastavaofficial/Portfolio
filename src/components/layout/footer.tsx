@@ -38,8 +38,8 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="bg-card text-card-foreground border-t">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-card text-card-foreground border-t w-full max-w-full overflow-x-hidden">
+      <div className="container mx-auto px-4 py-12 w-full max-w-full">
         <div className="grid gap-12 md:grid-cols-3">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">

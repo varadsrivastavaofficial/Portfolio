@@ -179,8 +179,8 @@ export function MarketTicker() {
   }, []);
 
   return (
-    <div className="w-full bg-[#0a0a0c]/90 border-b border-neutral-800/60 backdrop-blur-md overflow-hidden py-1.5 px-3 text-xs select-none">
-      <div className="flex items-center">
+    <div className="w-full max-w-full bg-black border-b border-neutral-800/80 overflow-hidden py-1.5 px-3 text-xs select-none">
+      <div className="flex items-center max-w-full overflow-hidden">
         {/* Natural Financial Terminal Label */}
         <div className="hidden sm:flex items-center gap-2 px-2.5 py-0.5 rounded bg-neutral-900/90 border border-neutral-800 text-neutral-300 font-mono text-[11px] tracking-wider shrink-0 mr-4">
           <span className="relative flex h-1.5 w-1.5">
@@ -191,7 +191,7 @@ export function MarketTicker() {
         </div>
 
         {/* Scrolling Ticker Stream */}
-        <div className="flex-1 overflow-hidden whitespace-nowrap">
+        <div className="flex-1 overflow-hidden whitespace-nowrap max-w-full">
           <div className="inline-flex gap-8 animate-marquee hover:[animation-play-state:paused]">
             {[...tickers, ...tickers].map((t, idx) => (
               <div

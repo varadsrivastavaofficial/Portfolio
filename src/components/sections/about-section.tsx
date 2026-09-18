@@ -92,7 +92,7 @@ export function AboutSection() {
                 </div>
 
                 {/* Languages */}
-                <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
+                <div className="mt-4 flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-muted-foreground">
                   <Globe className="h-4 w-4 text-primary shrink-0" />
                   <span className="font-semibold text-foreground">Languages:</span>
                   {LANGUAGES_DATA.map((lang) => (

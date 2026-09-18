@@ -13,10 +13,10 @@ import { MarketTicker } from '@/components/shared/market-ticker';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col w-full relative">
       <Header />
       <MarketTicker />
-      <main className="flex-1">
+      <main className="flex-1 w-full">
         <HeroSection />
         <AboutSection />
         <ExperienceSection />

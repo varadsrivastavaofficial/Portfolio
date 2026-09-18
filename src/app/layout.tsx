@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Toaster } from '@/components/ui/toaster';
+import { SplashCursor } from '@/components/ui/splash-cursor';
+import { Hyperspeed } from '@/components/ui/hyperspeed';
 import './globals.css';
 import { cn } from '@/lib/utils';
 
@@ -40,10 +42,23 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <body
         className={cn(
-          'antialiased bg-background text-foreground selection:bg-primary/30 selection:text-primary'
+          'antialiased bg-background text-foreground selection:bg-primary/30 selection:text-primary min-h-screen w-full relative'
         )}
       >
-        {children}
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+          <Hyperspeed />
+        </div>
+        <SplashCursor
+          DENSITY_DISSIPATION={1.5}
+          VELOCITY_DISSIPATION={3}
+          SPLAT_RADIUS={0.07}
+          SPLAT_FORCE={5000}
+          COLOR="#FFD700"
+          RAINBOW_MODE={true}
+        />
+        <div className="relative z-10 w-full min-h-screen flex flex-col">
+          {children}
+        </div>
         <Toaster />
       </body>
     </html>

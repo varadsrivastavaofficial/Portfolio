@@ -41,12 +41,12 @@ export function ResumeSection() {
   return (
     <section
       id="resume"
-      className="container mx-auto py-24 sm:py-32 px-4"
+      className="container mx-auto py-24 sm:py-32 px-4 w-full max-w-full"
       aria-labelledby="resume-heading"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto w-full">
         <Reveal>
-          <div className="p-8 sm:p-12 rounded-3xl bg-card/60 backdrop-blur-xl border border-primary/30 shadow-2xl relative overflow-hidden text-center sm:text-left">
+          <div className="p-6 sm:p-12 rounded-3xl bg-card/60 backdrop-blur-xl border border-primary/30 shadow-2xl relative overflow-hidden text-center sm:text-left w-full">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
@@ -61,7 +61,7 @@ export function ResumeSection() {
                   A structured overview of my quantitative research, academic background in Economics & Data Science at IISER Bhopal, machine learning trading internships, and technical certifications.
                 </p>
 
-                <div className="pt-2 flex flex-wrap gap-y-2 gap-x-4 text-xs text-neutral-300">
+                <div className="pt-2 flex flex-wrap gap-y-2 gap-x-4 text-xs text-neutral-300 justify-center sm:justify-start">
                   <span className="flex items-center gap-1.5">
                     <CheckCircle2 className="h-4 w-4 text-primary" /> Trading Algorithms & ML
                   </span>
@@ -87,7 +87,7 @@ export function ResumeSection() {
                     </Button>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto bg-card border-border/70 p-6 sm:p-10 font-serif">
+                  <DialogContent className="max-w-[95vw] sm:max-w-4xl max-h-[85vh] overflow-y-auto bg-card border-border/70 p-4 sm:p-10 font-serif">
                     <DialogHeader className="border-b border-border/40 pb-5 text-left">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div>

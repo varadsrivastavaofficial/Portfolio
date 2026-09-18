@@ -106,13 +106,11 @@ export function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-500',
-        isScrolled
-          ? 'bg-background/85 border-b border-border/40 backdrop-blur-xl shadow-lg shadow-black/10'
-          : 'bg-transparent'
+        'sticky top-0 z-50 w-full max-w-full transition-all duration-300',
+        'bg-black/95 dark:bg-black bg-background border-b border-border/40 shadow-md shadow-black/20'
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 w-full max-w-full">
         <Link
           href="/"
           className="group flex items-center gap-2.5 transition-transform duration-300 hover:scale-105"
@@ -132,7 +130,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 p-1 rounded-xl bg-card/60 border border-border/40 backdrop-blur-md">
+        <nav className="hidden md:flex items-center gap-1 p-1 rounded-xl bg-neutral-950/90 border border-neutral-800/80">
           {navLinks}
         </nav>
 

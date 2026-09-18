@@ -16,10 +16,10 @@ import { ArrowLeft, HeartHandshake, Calendar } from 'lucide-react';
 
 export default function VolunteeringPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col bg-background w-full max-w-full overflow-x-hidden">
       <Header />
-      <main className="flex-1 py-16 sm:py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+      <main className="flex-1 py-16 sm:py-24 w-full max-w-full">
+        <div className="container mx-auto px-4 sm:px-6 w-full max-w-full">
           {/* Top Breadcrumb / Back Button */}
           <div className="max-w-7xl mx-auto mb-8">
             <Button

@@ -108,22 +108,18 @@ export function HeroSection() {
 
     let loadedCounter = 0;
     const onFrameLoad = (index: number) => {
+      if (loadedStatusRef.current[index]) return;
       loadedStatusRef.current[index] = true;
       loadedCounter++;
       setLoadedCount(loadedCounter);
 
-      // Once initial frames are loaded, reveal canvas
-      if (index === 0 || loadedCounter >= 6) {
+      // Once initial frame or early frames are loaded, reveal canvas immediately
+      if (index === 0 || loadedCounter >= 1) {
         setIsInitialReady(true);
       }
 
-      // If the newly loaded frame is currently the requested one or close, redraw
-      if (
-        Math.abs(index - currentRequestedFrameRef.current) <= 1 ||
-        lastDrawnIndexRef.current === -1
-      ) {
-        drawFrame(currentRequestedFrameRef.current);
-      }
+      // Redraw current frame
+      drawFrame(currentRequestedFrameRef.current);
     };
 
     // Priority loading: load first 12 frames immediately
@@ -132,11 +128,19 @@ export function HeroSection() {
       const img = images[i];
       img.onload = () => onFrameLoad(i);
       img.onerror = () => {
-        // Fallback or retry
         console.warn(`Failed to load frame ${i + 1}`);
       };
       img.src = getFrameUrl(i + 1);
+      if (img.complete && img.naturalWidth > 0) {
+        onFrameLoad(i);
+      }
     }
+
+    // Fallback safety timeout: ensure canvas is revealed even under slow network
+    const fallbackTimer = setTimeout(() => {
+      setIsInitialReady(true);
+      drawFrame(0);
+    }, 1200);
 
     // Chunked progressive loader for remaining frames to prevent network congestion
     let nextChunkStart = PRIORITY_COUNT;
@@ -154,6 +158,9 @@ export function HeroSection() {
           console.warn(`Failed to load frame ${i + 1}`);
         };
         img.src = getFrameUrl(i + 1);
+        if (img.complete && img.naturalWidth > 0) {
+          onFrameLoad(i);
+        }
       }
       nextChunkStart = end;
       if (nextChunkStart < FRAME_COUNT) {
@@ -192,6 +199,7 @@ export function HeroSection() {
     window.addEventListener('resize', handleResize);
 
     return () => {
+      clearTimeout(fallbackTimer);
       clearTimeout(chunkTimer);
       if (frameId) cancelAnimationFrame(frameId);
       window.removeEventListener('scroll', handleScroll);
@@ -206,12 +214,12 @@ export function HeroSection() {
   const isOverlayVisible = heroOpacity > 0.01;
 
   return (
-    <section id="hero" ref={heroRef} className="relative h-[400vh]">
+    <section id="hero" ref={heroRef} className="relative h-[400vh] w-full">
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-background">
         {/* WebP Animation Canvas */}
         <canvas
           ref={canvasRef}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 max-w-full ${
             isInitialReady ? 'opacity-100' : 'opacity-0'
           }`}
         />
@@ -222,7 +230,7 @@ export function HeroSection() {
 
         {/* Primary Hero Text (Visible at top of page, smoothly fades out as you scroll) */}
         <div
-          className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mx-auto transition-all duration-300 pointer-events-auto"
+          className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mx-auto transition-all duration-300 pointer-events-auto w-full"
           style={{
             opacity: heroOpacity,
             transform: `translateY(${heroTranslateY}px)`,
@@ -230,21 +238,21 @@ export function HeroSection() {
           }}
         >
           <h1
-            className="font-headline text-5xl font-extrabold tracking-tight text-white sm:text-7xl md:text-8xl drop-shadow-2xl"
+            className="font-headline text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-white drop-shadow-2xl break-words"
             style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}
           >
             Varad Srivastava
           </h1>
 
           <p
-            className="mt-4 font-headline text-2xl font-bold text-primary sm:text-3xl"
+            className="mt-3 sm:mt-4 font-headline text-xl font-bold text-primary sm:text-3xl break-words"
             style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}
           >
             Quantitative Finance & Risk Analytics
           </p>
 
           <p
-            className="mt-6 max-w-2xl text-base sm:text-lg text-neutral-200 leading-relaxed font-body"
+            className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-lg text-neutral-200 leading-relaxed font-body"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}
           >
             Bridging the gap between data and decision-making with quantitative analysis, machine learning trading algorithms, and actuarial risk modeling.

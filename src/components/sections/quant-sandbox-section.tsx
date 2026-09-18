@@ -8,6 +8,16 @@ import { Badge } from '@/components/ui/badge';
 import { Reveal } from '@/components/shared/reveal';
 import { Calculator, Play, RefreshCw, BarChart3, TrendingUp, Cpu, Info } from 'lucide-react';
 
+// Deterministic pseudo-random number generator (Mulberry32)
+function mulberry32(a: number) {
+  return function () {
+    let t = (a += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 export function QuantSandboxSection() {
   const [activeTab, setActiveTab] = useState<'montecarlo' | 'footballfield'>('montecarlo');
 
@@ -35,11 +45,15 @@ export function QuantSandboxSection() {
     const generatedPaths: number[][] = [];
     const terminalPrices: number[] = [];
 
-    // Simple pseudo-random normal distribution using Box-Muller
+    // Seeded deterministic PRNG to guarantee exact match across SSR & client hydration
+    const prng = mulberry32(seed * 2654435761 + days * 7919 + Math.floor(initialPrice * 100));
+
+    // Box-Muller transformation for normal distribution
     const randomNormal = () => {
-      let u = 0, v = 0;
-      while (u === 0) u = Math.random();
-      while (v === 0) v = Math.random();
+      let u = 0,
+        v = 0;
+      while (u === 0) u = prng();
+      while (v === 0) v = prng();
       return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
     };
 
@@ -105,10 +119,10 @@ export function QuantSandboxSection() {
             </p>
 
             {/* Tab Selector */}
-            <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-card border border-border/60 shadow-lg">
+            <div className="mt-8 inline-flex flex-col sm:flex-row p-1.5 rounded-2xl bg-card border border-border/60 shadow-lg max-w-full w-full sm:w-auto gap-1">
               <button
                 onClick={() => setActiveTab('montecarlo')}
-                className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-center ${
                   activeTab === 'montecarlo'
                     ? 'bg-primary text-primary-foreground shadow-md'
                     : 'text-muted-foreground hover:text-foreground'
@@ -118,7 +132,7 @@ export function QuantSandboxSection() {
               </button>
               <button
                 onClick={() => setActiveTab('footballfield')}
-                className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-center ${
                   activeTab === 'footballfield'
                     ? 'bg-primary text-primary-foreground shadow-md'
                     : 'text-muted-foreground hover:text-foreground'
@@ -277,7 +291,7 @@ export function QuantSandboxSection() {
                       <div className="border-b border-border w-full" />
                     </div>
 
-                    <svg className="w-full h-full overflow-visible" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <svg className="w-full h-full overflow-hidden" viewBox="0 0 100 100" preserveAspectRatio="none">
                       {paths.map((p, idx) => {
                         const totalSteps = p.length - 1;
                         const minP = initialPrice * 0.5;
@@ -304,7 +318,7 @@ export function QuantSandboxSection() {
                       })}
                     </svg>
 
-                    <div className="flex justify-between items-center text-[10px] text-muted-foreground font-mono pt-2 border-t border-border/40 z-10">
+                    <div className="flex justify-between items-center text-[9px] sm:text-[10px] text-muted-foreground font-mono pt-2 border-t border-border/40 z-10 flex-wrap gap-1">
                       <span>Day 0 (${initialPrice})</span>
                       <span>Day {Math.round(days / 2)}</span>
                       <span>Day {days} (Exp: ${stats.meanTerminal})</span>
@@ -393,14 +407,15 @@ export function QuantSandboxSection() {
                   {/* Horizontal Range Bars */}
                   <div className="space-y-6 pt-2 pb-4">
                     {footballFieldRanges.map((range) => {
-                      const leftPercent = getXPercent(range.low);
-                      const widthPercent = getXPercent(range.high) - leftPercent;
+                      const leftPercent = Math.max(0, Math.min(95, getXPercent(range.low)));
+                      const rawWidth = getXPercent(range.high) - leftPercent;
+                      const widthPercent = Math.max(4, Math.min(rawWidth, 100 - leftPercent));
 
                       return (
                         <div key={range.name} className="space-y-1.5">
                           <div className="flex justify-between text-xs font-semibold">
-                            <span className="text-foreground">{range.name}</span>
-                            <span className="text-primary font-bold">${range.low} — ${range.high}</span>
+                            <span className="text-foreground truncate mr-2">{range.name}</span>
+                            <span className="text-primary font-bold shrink-0">${range.low} — ${range.high}</span>
                           </div>
 
                           <div className="relative h-7 w-full bg-background/60 rounded-lg border border-border/40 overflow-hidden flex items-center">
@@ -413,10 +428,10 @@ export function QuantSandboxSection() {
 
                             {/* Range Bar */}
                             <div
-                              className={`h-full ${range.color} rounded-md transition-all duration-500 shadow-md flex items-center justify-center text-[10px] text-white font-bold px-2`}
+                              className={`h-full ${range.color} rounded-md transition-all duration-500 shadow-md flex items-center justify-center text-[10px] text-white font-bold px-2 truncate`}
                               style={{
                                 marginLeft: `${leftPercent}%`,
-                                width: `${Math.max(widthPercent, 4)}%`,
+                                width: `${widthPercent}%`,
                               }}
                             >
                               ${range.low} - ${range.high}
