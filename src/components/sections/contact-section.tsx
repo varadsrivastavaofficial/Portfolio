@@ -1,7 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, MapPin, Send, MessageSquare, Linkedin, Github, Phone, GraduationCap, Copy, Check } from 'lucide-react';
+import { Mail, MapPin, Send, MessageSquare, Linkedin, Github, GraduationCap, Copy, Check } from 'lucide-react';
+
+
+
 import { Reveal } from '@/components/shared/reveal';
 import { ContactForm } from '@/components/shared/contact-form';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -118,37 +121,6 @@ export function ContactSection() {
                       title="Copy Academic Email"
                     >
                       {copiedKey === 'collegeEmail' ? (
-                        <Check className="h-4 w-4 text-emerald-400" />
-                      ) : (
-                        <Copy className="h-4 w-4" />
-                      )}
-                    </Button>
-                  </div>
-
-                  {/* Phone */}
-                  <div className="flex items-center justify-between gap-2 p-3 rounded-xl bg-background/50 border border-border/40">
-                    <div className="flex items-start gap-3.5 min-w-0">
-                      <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
-                        <Phone className="h-4 w-4" />
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">Phone / WhatsApp</p>
-                        <a
-                          href={`tel:${PROFILE_DATA.phone}`}
-                          className="text-xs sm:text-sm font-semibold text-foreground hover:text-primary transition-colors"
-                        >
-                          {PROFILE_DATA.phone}
-                        </a>
-                      </div>
-                    </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleCopy(PROFILE_DATA.phone, 'phone', 'Phone Number')}
-                      className="h-8 w-8 rounded-lg shrink-0 hover:bg-primary/10 text-muted-foreground hover:text-primary"
-                      title="Copy Phone Number"
-                    >
-                      {copiedKey === 'phone' ? (
                         <Check className="h-4 w-4 text-emerald-400" />
                       ) : (
                         <Copy className="h-4 w-4" />

@@ -16,13 +16,13 @@ export const PROFILE_DATA = {
   name: 'Varad Srivastava',
   title: 'B.S. Economics • Minor in Data Science Engineering',
   institution: 'Indian Institute of Science Education and Research - Bhopal',
-  phone: '+91-8869981299',
   email: 'varadsrivastavaofficial@gmail.com',
   collegeEmail: 'varad24@iiserb.ac.in',
   github: 'https://github.com/varadsrivastavaofficial',
   linkedin: 'https://www.linkedin.com/in/varadsrivastavaofficial/',
   bio: 'Economics undergraduate at IISER Bhopal with a minor in Data Science Engineering, combining quantitative finance, econometrics, machine learning, and programming with hands-on experience in trading strategies, valuation, insurance analytics, and AI-driven solutions. Interested in risk analysis, investment research, and quantitative finance, with additional strengths in data analysis, visualisation, and creative design.',
 };
+
 
 export const SKILLS_DATA = {
   'Quantitative & Mathematical Proficiency': [

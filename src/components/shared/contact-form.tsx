@@ -25,9 +25,6 @@ const formSchema = z.object({
   email: z.string().email({
     message: 'Please enter a valid email address.',
   }),
-  phone: z.string().min(7, {
-    message: 'Please enter a valid phone number.',
-  }),
   subject: z.string().min(3, {
     message: 'Subject must be at least 3 characters.',
   }),
@@ -46,7 +43,6 @@ export function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
-      phone: '',
       subject: '',
       message: '',
     },
@@ -69,7 +65,6 @@ export function ContactForm() {
           _subject: emailSubject,
           name: values.name,
           email: values.email,
-          phone: values.phone,
           subject: values.subject,
           message: values.message,
           _captcha: 'false',
@@ -89,7 +84,7 @@ export function ContactForm() {
         // Fallback to mailto pre-fill if direct HTTP fails
         const encodedSubject = encodeURIComponent(emailSubject);
         const encodedBody = encodeURIComponent(
-          `Hi Varad,\n\n${values.message}\n\n---\nSender Details:\nName: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}`
+          `Hi Varad,\n\n${values.message}\n\n---\nSender Details:\nName: ${values.name}\nEmail: ${values.email}`
         );
         window.location.href = `mailto:${emailRecipient}?subject=${encodedSubject}&body=${encodedBody}`;
 
@@ -103,7 +98,7 @@ export function ContactForm() {
       // Fallback: mailto
       const encodedSubject = encodeURIComponent(emailSubject);
       const encodedBody = encodeURIComponent(
-        `Hi Varad,\n\n${values.message}\n\n---\nSender Details:\nName: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}`
+        `Hi Varad,\n\n${values.message}\n\n---\nSender Details:\nName: ${values.name}\nEmail: ${values.email}`
       );
       window.location.href = `mailto:${emailRecipient}?subject=${encodedSubject}&body=${encodedBody}`;
 
@@ -172,47 +167,26 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <FormField
-            control={form.control}
-            name="phone"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Phone Number <RequiredIndicator />
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="e.g. +91 98765 43210"
-                    className="bg-background/60 border-border/50 focus:border-primary focus:ring-primary/20 rounded-xl font-serif"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Subject <RequiredIndicator />
+              </FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="e.g. Quantitative Finance Opportunity"
+                  className="bg-background/60 border-border/50 focus:border-primary focus:ring-primary/20 rounded-xl font-serif"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Subject <RequiredIndicator />
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="e.g. Quantitative Finance Opportunity"
-                    className="bg-background/60 border-border/50 focus:border-primary focus:ring-primary/20 rounded-xl font-serif"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
 
         <FormField
           control={form.control}
