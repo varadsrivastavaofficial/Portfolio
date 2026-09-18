@@ -1,0 +1,82 @@
+{
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "Abstract financial chart",
+      "imageUrl": "https://images.unsplash.com/photo-1723785735443-16ffd373f398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmaW5hbmNlJTIwY2hhcnR8ZW58MHx8fHwxNzY3OTIxMjE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finance chart"
+    },
+    {
+      "id": "project-2",
+      "description": "Netflix viewing trends analysis dashboard",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Netflix/1750528548315%20(1).jpeg",
+      "imageHint": "dashboard interface"
+    },
+    {
+      "id": "project-3",
+      "description": "Data and code on screen",
+      "imageUrl": "https://images.unsplash.com/photo-1763568258226-3e3f67a6577e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2RlJTIwZGF0YXxlbnwwfHx8fDE3Njc5MzkwODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code data"
+    },
+    {
+      "id": "hobby-1",
+      "description": "Graphic design tools on a desk",
+      "imageUrl": "https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "graphic design"
+    },
+    {
+      "id": "hobby-2",
+      "description": "A pair of boxing gloves",
+      "imageUrl": "https://images.unsplash.com/photo-1669500635486-53b02ec7919b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxib3hpbmclMjBnbG92ZXN8ZW58MHx8fHwxNzY3ODY5OTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "boxing gloves"
+    },
+    {
+      "id": "hobby-3",
+      "description": "Video editing software on a computer screen",
+      "imageUrl": "https://images.unsplash.com/photo-1605826832916-d0ea9d6fe71e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2aWRlbyUyMGVkaXRpbmd8ZW58MHx8fHwxNzY3OTAzNTI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "video editing"
+    },
+    {
+      "id": "education-1",
+      "description": "IISERB campus",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/College/1551849381phpnCJWnF%20(1).jpeg",
+      "imageHint": "university campus"
+    },
+    {
+      "id": "volunteering-1",
+      "description": "Group of volunteers working together",
+      "imageUrl": "https://images.unsplash.com/photo-1765018028697-2baae4577cdd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2b2x1bnRlZXJzJTIwY29tbXVuaXR5fGVufDB8fHx8MTc2Nzg3MjIxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "volunteers community"
+    },
+    {
+      "id": "education-2",
+      "description": "LPC School Building",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/School/564599380_1282660880549386_2972099185356676857_n%20(1).jpg",
+      "imageHint": "school building"
+    },
+    {
+      "id": "education-3",
+      "description": "LPC School Building",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/School/564599380_1282660880549386_2972099185356676857_n%20(1).jpg",
+      "imageHint": "school building"
+    },
+    {
+      "id": "volunteering-2",
+      "description": "Computer club meeting",
+      "imageUrl": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "computer club"
+    },
+    {
+      "id": "volunteering-3",
+      "description": "Mathematics on a blackboard",
+      "imageUrl": "https://images.unsplash.com/photo-1596495577886-d9256f437083?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "math blackboard"
+    },
+    {
+      "id": "hobby-4",
+      "description": "A person practicing a karate kick",
+      "imageUrl": "https://mqvzczviyjdwmankwpyy.supabase.co/storage/v1/object/public/Karate/7c11bec1-42b3-441f-bb95-63d3c8afdc68.jpg",
+      "imageHint": "karate kick"
+    }
+  ]
+}

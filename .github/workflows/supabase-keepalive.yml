@@ -1,0 +1,33 @@
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 09:00 IST daily
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          curl -i --max-time 30 \
+          -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
+          "${{ secrets.SUPABASE_URL }}/rest/v1/keepalive_ping?select=id&limit=1"
+
+      - name: Send failure email
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Supabase Keep-Alive workflow failed"
+          to: varadsrivastava7@gmail.com
+          from: Supabase Keep-Alive Bot
+          body: |
+            The scheduled Supabase keep-alive job failed.
+            Repository: ${{ github.repository }}
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
