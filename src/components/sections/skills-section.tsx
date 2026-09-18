@@ -4,6 +4,9 @@ import { CheckCircle2, Code2, LineChart, Palette, Cpu, Layers, BookOpen } from '
 import { Reveal } from '@/components/shared/reveal';
 
 const categoryIcons: Record<string, typeof Code2> = {
+  'Quantitative & Mathematical Proficiency': LineChart,
+  'Technical & Financial Programming': Code2,
+  'Soft Skills & Professional Leadership': Palette,
   'Python & Quantitative': Code2,
   'BI & Financial Analytics': LineChart,
   'Languages & AI Engineering': Cpu,
@@ -27,7 +30,7 @@ export function SkillsSection() {
             id="skills-heading"
             className="font-headline text-3xl sm:text-5xl font-bold tracking-tight text-foreground"
           >
-            Core <span className="text-primary">Competencies & Courses</span>
+            Core <span className="text-primary">Competencies & Skills</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground">
             Bridging quantitative economics, machine learning algorithms, actuarial risk validation, and mathematical foundations.
@@ -35,14 +38,14 @@ export function SkillsSection() {
         </Reveal>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto items-start">
         {Object.entries(SKILLS_DATA).map(([category, skills], index) => {
           const Icon = categoryIcons[category] || Code2;
           return (
             <Reveal key={category} delay={index * 80}>
-              <Card className="group h-full border-border/50 bg-card/70 backdrop-blur-md transition-all duration-500 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1.5 flex flex-col justify-between">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-3 mb-2">
+              <Card className="group h-full border-border/50 bg-card/70 backdrop-blur-md transition-all duration-500 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1.5 flex flex-col justify-start">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-3 mb-1">
                     <div className="p-2.5 rounded-xl bg-primary/10 text-primary border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                       <Icon className="h-5 w-5" />
                     </div>
@@ -52,8 +55,9 @@ export function SkillsSection() {
                   </div>
                 </CardHeader>
 
-                <CardContent className="pt-0">
+                <CardContent className="pt-1 pb-6">
                   <ul className="space-y-2.5">
+
                     {skills.map((skill) => (
                       <li
                         key={skill}
