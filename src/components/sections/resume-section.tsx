@@ -167,30 +167,63 @@ export function ResumeSection() {
                         </div>
                       </div>
 
-                      {/* Certifications */}
+                      {/* Certifications & Key Achievements */}
                       <div>
                         <h4 className="font-bold text-primary uppercase tracking-wider text-xs mb-3 flex items-center gap-2">
-                          <ShieldCheck className="h-4 w-4" /> Certifications & Achievements
+                          <ShieldCheck className="h-4 w-4" /> Certifications & Competitive Selections
                         </h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                          {CERTIFICATIONS_DATA.map((cert) => (
-                            <div key={cert.title} className="p-3 rounded-xl bg-background/50 border border-border/40 text-center sm:text-left">
-                              <p className="font-bold text-foreground text-xs">{cert.title}</p>
-                              <p className="text-[11px] text-primary">{cert.issuer}</p>
-                              <p className="text-[10px] text-muted-foreground font-mono">{cert.year}</p>
-                            </div>
-                          ))}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">10th Summer School on Artificial Intelligence</p>
+                            <p className="text-[11px] text-primary">CVIT, IIIT Hyderabad (IIITH)</p>
+                            <p className="text-[10px] text-muted-foreground">Computer Vision & Machine Learning Selection</p>
+                          </div>
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">Online Foundation Course in Mathematics (OFCM 2025)</p>
+                            <p className="text-[11px] text-primary">MTTS & NBHM</p>
+                            <p className="text-[10px] text-muted-foreground">Advanced Mathematical Foundations</p>
+                          </div>
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">Solvothon Healthcare AI Hackathon (Round 1)</p>
+                            <p className="text-[11px] text-primary">IIT Delhi (IITD) & Apollo Hospitals</p>
+                            <p className="text-[10px] text-muted-foreground">Competitive AI Hackathon Selection</p>
+                          </div>
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">1st Prize - JEE Simulated Grand Tests</p>
+                            <p className="text-[11px] text-primary">PW Lucknow (All 5 Branches)</p>
+                            <p className="text-[10px] text-muted-foreground">Top Rank in Simulated JEE Tests</p>
+                          </div>
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">AWS AI/ML Scholar & Agentic AI Nanodegree</p>
+                            <p className="text-[11px] text-primary">Amazon Web Services (AWS)</p>
+                            <p className="text-[10px] text-muted-foreground">2025</p>
+                          </div>
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">Python: Code in Place</p>
+                            <p className="text-[11px] text-primary">Stanford University</p>
+                            <p className="text-[10px] text-muted-foreground">2025</p>
+                          </div>
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">Leadership Programs</p>
+                            <p className="text-[11px] text-primary">McKinsey Forward & Aspire Institute</p>
+                            <p className="text-[10px] text-muted-foreground">Strategic Leadership & Critical Problem Solving</p>
+                          </div>
+                          <div className="p-3 rounded-xl bg-background/50 border border-border/40">
+                            <p className="font-bold text-foreground text-xs">Sports: Martial Arts (2x Runner-Up)</p>
+                            <p className="text-[11px] text-primary">Sangarsh Sports Fest 2025 & 2026</p>
+                            <p className="text-[10px] text-muted-foreground">Continuous Competitive Athletic Discipline</p>
+                          </div>
                         </div>
                       </div>
 
                       {/* Positions of Responsibility */}
                       <div>
                         <h4 className="font-bold text-primary uppercase tracking-wider text-xs mb-3 flex items-center gap-2">
-                          <Award className="h-4 w-4" /> Leadership & Responsibility
+                          <Award className="h-4 w-4" /> Leadership & Positions of Responsibility
                         </h4>
                         <div className="space-y-2">
                           {VOLUNTEERING_DATA.map((vol) => (
-                            <div key={vol.title} className="p-3 rounded-xl bg-background/50 border border-border/40 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
+                            <div key={vol.title + vol.organization} className="p-3 rounded-xl bg-background/50 border border-border/40 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
                               <div>
                                 <span className="font-bold text-foreground">{vol.title}</span> — <span className="text-muted-foreground">{vol.organization}</span>
                               </div>
@@ -199,6 +232,17 @@ export function ResumeSection() {
                           ))}
                         </div>
                       </div>
+
+                      {/* Languages */}
+                      <div>
+                        <h4 className="font-bold text-primary uppercase tracking-wider text-xs mb-2">
+                          Languages
+                        </h4>
+                        <p className="text-xs text-muted-foreground">
+                          Hindi (Native) • English (Proficient) • German (Early Intermediate) • Sanskrit (Early Intermediate)
+                        </p>
+                      </div>
+
                     </div>
 
                     <div className="pt-4 border-t border-border/40 flex justify-end gap-3">

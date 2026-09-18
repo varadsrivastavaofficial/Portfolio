@@ -31,8 +31,8 @@ export function AboutSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60" />
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-card/80 backdrop-blur-md border border-border/50">
                     <p className="font-headline font-bold text-white text-lg">Varad Srivastava</p>
-                    <p className="text-xs text-primary font-medium">B.S. Economics • Minor in Data Science</p>
-                    <p className="text-[11px] text-muted-foreground mt-0.5">IISER Bhopal (CPI: 7.68)</p>
+                    <p className="text-xs text-primary font-medium">B.S. Economics • Minor in Data Science Engineering</p>
+                    <p className="text-[11px] text-muted-foreground mt-0.5">IISER Bhopal (GPA: 7.68/10)</p>
                   </div>
                 </div>
               </div>
@@ -54,12 +54,13 @@ export function AboutSection() {
                 </h2>
 
                 <p className="mt-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
-                  An analytical and detail-oriented undergraduate in Economics with a Minor in Data Science at the Indian Institute of Science Education and Research (IISER), Bhopal. A philomath experienced in financial data analysis, statistics, data modelling, and Excel-based analytics.
+                  Economics undergraduate at IISER Bhopal with a minor in Data Science Engineering, combining quantitative finance, econometrics, machine learning, and programming with hands-on experience in trading strategies, valuation, insurance analytics, and AI-driven solutions.
                 </p>
 
                 <p className="mt-4 text-base sm:text-lg leading-relaxed text-muted-foreground">
-                  Passionate about investment research, algorithmic trading, actuarial risk analysis, and data-driven decision-making with a proven ability to collaborate effectively in fast-paced research and corporate environments.
+                  Interested in risk analysis, investment research, and quantitative finance, with additional strengths in data analysis, visualisation, and creative design.
                 </p>
+
 
                 {/* Quick Highlights Badges */}
                 <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">

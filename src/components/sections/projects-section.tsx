@@ -242,7 +242,7 @@ export function ProjectsSection() {
 
             {/* Category Filter Tabs */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-              {['All', 'Valuation', 'Algorithmic', 'Analytics'].map((category) => (
+              {['All', 'Valuation', 'Risk & Actuarial', 'Blockchain', 'Analytics'].map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -256,6 +256,7 @@ export function ProjectsSection() {
                 </button>
               ))}
             </div>
+
           </Reveal>
         </div>
 

@@ -57,9 +57,20 @@ export function ExperienceSection() {
                   </div>
                 </div>
 
-                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-body mb-5">
+                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-body mb-3">
                   {exp.description}
                 </p>
+
+                {exp.highlights && exp.highlights.length > 0 && (
+                  <ul className="space-y-1.5 mb-5 text-xs sm:text-sm text-neutral-300">
+                    {exp.highlights.map((h, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-primary font-bold mt-0.5">•</span>
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
                 <div className="flex flex-wrap gap-2">
                   {exp.skills.map((skill) => (

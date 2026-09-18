@@ -14,53 +14,46 @@ export const NAV_LINKS = [
 
 export const PROFILE_DATA = {
   name: 'Varad Srivastava',
-  title: 'Economics Major & Data Science Minor',
-  institution: 'Indian Institute of Science Education and Research (IISER), Bhopal',
-  phone: '+91-8860081209',
+  title: 'B.S. Economics • Minor in Data Science Engineering',
+  institution: 'Indian Institute of Science Education and Research - Bhopal',
+  phone: '+91-8869981299',
   email: 'varadsrivastavaofficial@gmail.com',
   collegeEmail: 'varad24@iiserb.ac.in',
   github: 'https://github.com/varadsrivastavaofficial',
   linkedin: 'https://www.linkedin.com/in/varadsrivastavaofficial/',
-  bio: 'An analytical and detail-oriented undergraduate in Economics with strong quantitative, programming, and research skills. A philomath experienced in financial data analysis, statistics, data modelling, and Excel-based analytics. Passionate about investment research, risk analysis, and data-driven decision-making. Proven ability to work collaboratively and meet deadlines in fast-paced environments.',
+  bio: 'Economics undergraduate at IISER Bhopal with a minor in Data Science Engineering, combining quantitative finance, econometrics, machine learning, and programming with hands-on experience in trading strategies, valuation, insurance analytics, and AI-driven solutions. Interested in risk analysis, investment research, and quantitative finance, with additional strengths in data analysis, visualisation, and creative design.',
 };
 
 export const SKILLS_DATA = {
-  'Python & Quantitative': [
-    'Pandas',
-    'NumPy',
-    'Matplotlib',
-    'Scikit-learn',
-    'Yfinance',
-    'QuantLib',
-  ],
-  'BI & Financial Analytics': [
-    'Power BI',
-    'MS Excel (Advanced, Financial Modeling)',
-    'Risk Capital Modeling (Monte Carlo)',
-    'Time Series & Meta Prophet',
-    'DCF Valuation & Football Field Analysis',
-  ],
-  'Languages & AI Engineering': [
-    'Java (Intermediate)',
-    'C / C++ (Intermediate)',
-    'AI & LLM Risk Agents',
-    'Vibe Coding',
-    'GitHub / Git',
-    'LaTeX',
-  ],
-  'Creative & Media': [
-    'Graphic Designing (Canva)',
-    'Video Editing (Adobe After Effects)',
-    'Brand & Merchandise Design',
-  ],
-  'Core Courses & Mathematics': [
-    'Linear Algebra',
-    'Multi-variable Calculus',
+  'Quantitative & Mathematical Proficiency': [
     'Probability & Statistics',
-    'Discrete Mathematics',
+    'Machine Learning',
+    'Feature Engineering',
+    'Optimisation',
     'Data Structures & Algorithms',
     'Econometrics',
-    'Microeconomics & Macroeconomics',
+    'Game Theory',
+    'Valuations & Finance',
+  ],
+  'Technical & Financial Programming': [
+    'Python (Pandas, NumPy, Matplotlib, Scikit-learn, Yfinance, QuantLib)',
+    'Java',
+    'C',
+    'Power BI (DAX, Power Query)',
+    'MS Excel (Financial Modeling, Advanced Analytics)',
+    'Agentic AI Development',
+    'Solidity & Blockchain',
+    'Git & GitHub',
+    'LaTeX',
+  ],
+  'Soft Skills & Professional Leadership': [
+    'Professional Communication',
+    'Strategic Decision Making under Pressure',
+    'Teamwork & Collaboration',
+    'Adaptability & Critical Thinking',
+    'Attention to Detail',
+    'Adobe Creative Suite (Video & Motion Design)',
+    'Time Management',
   ],
 };
 
@@ -70,68 +63,158 @@ export type Experience = {
   period: string;
   location: string;
   description: string;
+  highlights: string[];
   skills: string[];
 };
 
 export const EXPERIENCE_DATA: Experience[] = [
   {
-    role: 'Intern',
-    company: 'Paterson Securities',
-    period: 'July 2026 - Present',
+    role: 'Quantitative Researcher Intern',
+    company: 'Paterson Securities Pvt. Ltd.',
+    period: 'July 2026 – Present',
     location: 'Remote',
     description:
-      'Designed Trading Algorithms using Machine Learning techniques and backtested them systematically to achieve high AUC score and optimized Sharpe ratio.',
-    skills: ['Trading Algorithms', 'Machine Learning', 'Backtesting', 'Sharpe Ratio', 'Python'],
+      'Quantitative algorithmic research focusing on dynamic technical indicators, statistical arbitrage, and machine learning models.',
+    highlights: [
+      'Experimented with different algorithms - DMA, Mean Reversions, Momentum and Statistical Arbitrage using Pair Trading.',
+      'Designed and Backtested Trading Algorithms using ML Techniques. High AUC/Sharpe ratio achieved.',
+    ],
+    skills: ['Trading Algorithms', 'Machine Learning', 'Statistical Arbitrage', 'Pair Trading', 'Backtesting', 'Sharpe Ratio', 'Python'],
+  },
+  {
+    role: 'Financial Analyst Apprentice',
+    company: 'First Step Finance',
+    period: 'Aug 2026 – Present',
+    location: 'Remote',
+    description:
+      'Institutional financial research and fundamental valuation of market infrastructure institutions.',
+    highlights: [
+      'Financial & Ratio Analysis: Analyzed CDSL\'s 5-year financial performance and benchmarked against NSDL.',
+      'DCF & Valuation: Built DCF, WACC, FCFF and comparable-company valuation models.',
+    ],
+    skills: ['Financial Analysis', 'DCF Valuation', 'WACC', 'FCFF', 'Ratio Analysis', 'Peer Benchmarking'],
   },
   {
     role: 'Data Intern',
     company: 'Karyarth Consultancy',
-    period: 'May 2026 - July 2026',
+    period: 'May 2026 – July 2026',
     location: 'Remote',
     description:
-      'Redesigned and automated data workflows using AI, significantly improving efficiency, pipeline reliability, and data accuracy across organizational operations.',
-    skills: ['Data Workflows', 'AI Automation', 'Process Optimization', 'Python'],
+      'Enterprise data workflow automation, AI pipeline integration, and executive reporting systems.',
+    highlights: [
+      'Redesigned and automated data workflows using AI, significantly improving efficiency, pipeline reliability, and data accuracy across organisational operations.',
+      'Developed automated Excel/Google Sheets reporting workflows and performance dashboards, enabling faster tracking of recruitment, attendance, and operational metrics.',
+    ],
+    skills: ['Data Workflows', 'AI Automation', 'Process Optimization', 'Excel Dashboards', 'Google Sheets'],
   },
   {
-    role: 'AI Applications Intern',
+    role: 'AI Intern',
     company: 'Sri Sai Sathya Institute of Actuaries (SSSIA)',
-    period: 'Jun. 2026',
+    period: 'June 2026',
     location: 'Remote',
     description:
-      'Applied AI and ML techniques to develop an end-to-end Risk Capital Modelling and Validation AI Agent for business risk analytics that automates data cleaning through report generation utilizing Monte Carlo simulations and Meta Prophet.',
-    skills: ['Risk Capital Modeling', 'Monte Carlo', 'Meta Prophet', 'AI Agents', 'Risk Analytics'],
+      'End-to-end actuarial risk capital modelling and validation AI agents for enterprise insurance risk analytics.',
+    highlights: [
+      'Developed an AI/ML-driven risk capital modelling and validation agent for business risk analytics, automating processes from data cleaning to report generation, using Monte Carlo simulations and Meta Prophet.',
+      'Co-designed a modular AI pipeline automating insurance risk analysis, from data validation to multi-dimensional risk modelling (XGBoost, Monte Carlo VaR) and regulatory reporting.',
+    ],
+    skills: ['Risk Capital Modeling', 'Monte Carlo Simulation', 'Meta Prophet', 'XGBoost', 'Value at Risk (VaR)', 'Actuarial Analytics'],
   },
   {
-    role: 'Data Visualization Intern',
+    role: 'Data Visualisation Intern',
     company: 'Infosys',
-    period: 'Jan. 2026 - Apr. 2026',
+    period: 'Jan 2025 – Apr 2025',
     location: 'Remote',
     description:
-      'Led a team analysing and forecasting Indian election trends using advanced data cleaning, predictive analytics, statistical modelling, and Power BI interactive dashboards.',
-    skills: ['Power BI', 'Team Leadership', 'Predictive Analytics', 'Data Visualization'],
+      'Electoral data intelligence, predictive analytics, and executive interactive dashboard development.',
+    highlights: [
+      'Led a team building an interactive Power BI dashboard on the 2024 Indian General Election, using Power Query and DAX to visualise party performance, alliance dynamics, and seat distribution.',
+      'Delivered state, region, and constituency-level electoral insights via dynamic slicers, enabling comparative and trend-based analysis of voting patterns.',
+    ],
+    skills: ['Power BI', 'DAX', 'Power Query', 'Data Visualisation', 'Predictive Analytics', 'Team Leadership'],
   },
 ];
 
-export type Certification = {
+export type Achievement = {
   title: string;
   issuer: string;
-  year: string;
+  category: 'Competition' | 'Selection' | 'Certification' | 'Sports' | 'Leadership';
+  description?: string;
 };
 
-export const CERTIFICATIONS_DATA: Certification[] = [
+export const ACHIEVEMENTS_DATA: Achievement[] = [
+  {
+    title: '10th Summer School on AI Selection',
+    issuer: 'CVIT, IIIT Hyderabad (IIITH)',
+    category: 'Selection',
+    description: 'Selected for competitive summer school focused on Computer Vision and Machine Learning.',
+  },
+  {
+    title: 'Online Foundation Course in Mathematics (OFCM 2025)',
+    issuer: 'MTTS & National Board for Higher Mathematics (NBHM)',
+    category: 'Selection',
+    description: 'Selected into advanced mathematical foundation training program.',
+  },
+  {
+    title: 'Solvothon Hackathon (Round 1 Cleared)',
+    issuer: 'IIT Delhi (IITD) & Apollo Hospitals',
+    category: 'Competition',
+    description: 'Cleared the initial competitive round in healthcare & AI hackathon.',
+  },
+  {
+    title: '1st Prize - JEE Simulated Grand Tests',
+    issuer: 'PW Lucknow (All 5 Branches)',
+    category: 'Competition',
+    description: 'Achieved highest final marks across Kapoorthala, Hazratganj, Gomtinagar, Alambagh, and Vrindavan centers.',
+  },
+  {
+    title: 'Two-Time Continuous Runner-Up in Martial Arts',
+    issuer: 'Sangarsh (Sports Fest) 2025 & 2026',
+    category: 'Sports',
+    description: 'Demonstrated competitive martial arts prowess and athletic discipline.',
+  },
+  {
+    title: 'Multiple-Time Winner in Design Competitions',
+    issuer: 'Logo & Video Editing Competitions',
+    category: 'Competition',
+    description: 'Recognized for creative excellence in graphic design and motion editing.',
+  },
+  {
+    title: 'AWS AI/ML Scholar & Agentic AI Nanodegree',
+    issuer: 'Amazon Web Services (AWS)',
+    category: 'Certification',
+  },
+  {
+    title: 'Python: Code in Place',
+    issuer: 'Stanford University',
+    category: 'Certification',
+  },
+  {
+    title: 'McKinsey Forward Program & Aspire Institute',
+    issuer: 'McKinsey & Company / Aspire Institute',
+    category: 'Leadership',
+  },
+];
+
+export const CERTIFICATIONS_DATA = [
+  {
+    title: 'Python: Code in Place',
+    issuer: 'Stanford University',
+    year: '2025',
+  },
+  {
+    title: 'AWS AI/ML Scholar & Agentic AI Nanodegree',
+    issuer: 'Amazon Web Services (AWS)',
+    year: '2025',
+  },
   {
     title: 'McKinsey Forward Program',
     issuer: 'McKinsey & Company',
     year: '2025',
   },
   {
-    title: 'Python (Code in Place)',
-    issuer: 'Stanford University',
-    year: '2025',
-  },
-  {
-    title: 'Fundamental Analysis Certification',
-    issuer: 'Finance & Economics Club (FEC), IIT Guwahati',
+    title: 'Aspire Leaders Program',
+    issuer: 'Aspire Institute',
     year: '2025',
   },
 ];
@@ -142,9 +225,10 @@ export type Language = {
 };
 
 export const LANGUAGES_DATA: Language[] = [
-  { language: 'English', proficiency: 'Proficient' },
   { language: 'Hindi', proficiency: 'Native' },
+  { language: 'English', proficiency: 'Proficient' },
   { language: 'German', proficiency: 'Early Intermediate' },
+  { language: 'Sanskrit', proficiency: 'Early Intermediate' },
 ];
 
 const [
@@ -167,7 +251,7 @@ export type Project = {
   title: string;
   subtitle?: string;
   period?: string;
-  category: 'Valuation' | 'Algorithmic' | 'Analytics';
+  category: 'Valuation' | 'Risk & Actuarial' | 'Blockchain' | 'Analytics';
   description: string;
   problem: string;
   tools: string[];
@@ -186,92 +270,118 @@ export type Project = {
 export const PROJECTS_DATA: Project[] = [
   {
     title: 'Fundamental Analysis of List of Stocks',
-    subtitle: 'Finance & Economics Club • IIT Guwahati',
-    period: 'May 2025 - Jun. 2025',
+    subtitle: 'Institutional Equity Valuation',
     category: 'Valuation',
     description:
-      'Performed comprehensive equity valuation using Football Field Chart Analysis and core financial metrics (P/E, EV/EBITDA, DCF).',
+      'Performed comprehensive Equity Valuation using Football Field Chart Analysis and Core Financial Metrics (P/E, EV/EBITDA, DCF).',
     problem:
-      'Traditional fundamental equity analysis is often fragmented across multiple disparate sources and lacks standardized multi-dimensional valuation ranges.',
+      'Fragmented financial reporting and inconsistent multiple valuation across industry peers requiring automated aggregation.',
     tools: ['Python', 'Pandas', 'Yfinance', 'DCF Valuation', 'Football Field Analysis'],
     outcome:
-      'Engineered an automated pipeline aggregating balance sheets, calculating multi-stage DCF, and generating comparative valuation bands.',
+      'Engineered an automated data pipeline extracting SEC/NSE filings, generating intrinsic DCF cash flow bands and relative peer comparables.',
     metrics: [
-      { label: 'Valuation Metrics', value: 'DCF, P/E, EV/EBITDA' },
+      { label: 'Models', value: 'DCF, P/E, EV/EBITDA' },
       { label: 'Data Source', value: 'Yfinance / SEC API' },
-      { label: 'Pipeline Speed', value: '< 2.5s per Ticker' },
+      { label: 'Output', value: 'Football Field Chart' },
     ],
     deepDive: {
       methodology:
-        'Constructed an intrinsic Discounted Cash Flow (DCF) model using a 5-year free cash flow projection with terminal growth rate (g=2.5%) and Weighted Average Cost of Capital (WACC) sensitivity matrix. Combined with relative valuation metrics (EV/EBITDA and P/E percentiles).',
+        'Constructed multi-stage Discounted Cash Flow models with WACC sensitivity matrices and comparative multiple benchmarking.',
       architecture:
-        'Python backend orchestrating Yfinance data ingestion -> Pandas cash flow restructuring -> NumPy matrix DCF engine -> Football Field visualization.',
+        'Python Yfinance ingestion -> Pandas financial statement restructuring -> NumPy DCF engine -> Football Field visualization.',
       keyLearnings: [
-        'Sensitivity of terminal value to minor changes in WACC discount rates.',
-        'Normalization of non-recurring line items in EBITDA across sector peers.',
+        'Sensitivity of terminal value to marginal fluctuations in WACC.',
+        'Normalizing non-recurring line items across competitor balance sheets.',
       ],
     },
     image: project1,
     sourceUrl: 'https://github.com/varadsrivastavaofficial/Investing-_Portfolio_Project',
   },
   {
-    title: 'Risk Capital Modelling AI Agent',
-    subtitle: 'SSSIA Actuarial Project',
-    period: 'Jun. 2026',
-    category: 'Algorithmic',
+    title: 'CRIP: Capital Risk Intelligence Pipeline',
+    subtitle: 'Multi-Agent Insurance Risk AI',
+    category: 'Risk & Actuarial',
     description:
-      'Developed an autonomous AI agent for business risk capital validation, automating data cleaning, Monte Carlo simulation, and Meta Prophet forecasting.',
+      'Co-developed a multi-agent AI pipeline for insurance risk analytics, integrating an XGBoost regressor for claims prediction and Monte Carlo simulations for portfolio stress testing and Value at Risk (VaR) calculation, deployed via a unified Streamlit dashboard.',
     problem:
-      'Actuarial and risk validation workflows require tedious manual data scrubbing and computational validation across thousands of risk scenarios.',
-    tools: ['Python', 'Monte Carlo (GBM)', 'Meta Prophet', 'AI Agents', 'Risk Analytics'],
+      'Complex multi-risk assessment (insurance, credit, market, operational, catastrophe) traditionally requires fragmented manual calculations.',
+    tools: ['Python', 'XGBoost', 'Monte Carlo', 'VaR', 'Streamlit', 'Multi-Agent AI'],
     outcome:
-      'Automated end-to-end actuarial risk assessment, producing capital adequacy ratios and statistical confidence intervals automatically.',
+      'Engineered a multi-dimensional risk evaluation module assessing insurance, credit, market, operational, and catastrophe (CAT) risk profiles to support comprehensive data-driven decision making.',
     metrics: [
-      { label: 'Simulations', value: '10,000+ Scenarios' },
-      { label: 'Time Saved', value: '~85% vs Manual' },
-      { label: 'Confidence Band', value: '95% & 99% VaR' },
+      { label: 'Simulations', value: '10,000+ Paths' },
+      { label: 'Risk Modules', value: '5 Dimensions' },
+      { label: 'Deployment', value: 'Streamlit Cloud' },
     ],
     deepDive: {
       methodology:
-        'Employed Geometric Brownian Motion with jump-diffusion and Meta Prophet time-series modeling to project worst-case tail risk and compute 99% Value at Risk (VaR) and Expected Shortfall (CVaR).',
+        'Integrated XGBoost claims regression with stochastic Monte Carlo jump-diffusion for portfolio tail risk (95% & 99% VaR and CVaR).',
       architecture:
-        'Agentic AI orchestrator -> Automated data preprocessing -> Monte Carlo simulation engine -> Automated LaTeX/HTML executive report builder.',
+        'Agentic AI Orchestrator -> Preprocessing pipeline -> XGBoost & Monte Carlo Engine -> Interactive Streamlit UI.',
       keyLearnings: [
-        'Handling fat-tailed non-Gaussian empirical distributions in business cash flows.',
-        'Designing autonomous agent loops with deterministic validation checks.',
+        'Fat-tailed loss distributions in actuarial catastrophe modeling.',
+        'Deploying multi-agent deterministic check loops for risk compliance.',
       ],
     },
     image: project3,
     sourceUrl: 'https://github.com/varadsrivastavaofficial',
   },
   {
-    title: 'Netflix Viewing Trends & Content Strategy Analysis',
-    subtitle: 'Data Analytics & Trend Modeling',
-    period: '2025',
-    category: 'Analytics',
+    title: 'BlockFund: Blockchain Time-Based Donation Contract',
+    subtitle: 'Decentralized Finance & Web3 Security',
+    category: 'Blockchain',
     description:
-      'Conducted data analysis on Netflix viewing trends to identify genre popularity and content release patterns.',
+      'Built a Solidity smart contract on Ethereum Sepolia with re-entrancy protection, alongside a JS frontend for wallet integration and real-time fund tracking.',
     problem:
-      'Understanding global viewer engagement, content longevity, and release timing on streaming platforms.',
-    tools: ['Power BI', 'Excel', 'Python', 'Pandas', 'Matplotlib'],
+      'Lack of transparency, centralized fee extraction, and vulnerability to re-entrancy exploits in traditional donation workflows.',
+    tools: ['Solidity', 'Ethereum Sepolia', 'JavaScript', 'Web3.js', 'MetaMask', 'Smart Contracts'],
     outcome:
-      'Derived predictive audience retention insights and created interactive executive dashboards.',
+      'Implemented secure, trustless financial logic, including goal-based withdrawals, donor refunds, and a live leaderboard, demonstrating applied blockchain security principles.',
     metrics: [
-      { label: 'Dataset Size', value: '50,000+ Titles' },
-      { label: 'Dashboard', value: 'Power BI Live' },
-      { label: 'Key Finding', value: 'Optimal Release Window' },
+      { label: 'Network', value: 'Ethereum Sepolia' },
+      { label: 'Security', value: 'Re-entrancy Guard' },
+      { label: 'Features', value: 'Goal Refunds & Rank' },
     ],
     deepDive: {
       methodology:
-        'Cleaned historical viewership logs, analyzed genre saturation indices, and calculated retention half-life across seasonal launch windows.',
+        'Designed smart contract state machines with time-lock checks, pull-over-push withdrawal patterns, and OpenZeppelin security standards.',
       architecture:
-        'Python ETL pipeline -> Cleaned CSV warehouse -> Power BI DAX semantic data model -> Interactive executive report.',
+        'Solidity Contract -> Sepolia Testnet -> Ethers.js/Web3 connector -> Responsive DApp Frontend.',
       keyLearnings: [
-        'Time-decay modeling for entertainment media consumption.',
-        'Executive data storytelling with high visual impact in Power BI.',
+        'Gas optimization in on-chain leaderboard sorting.',
+        'Preventing re-entrancy vulnerabilities with checks-effects-interactions pattern.',
       ],
     },
     image: project2,
+    sourceUrl: 'https://github.com/varadsrivastavaofficial',
+  },
+  {
+    title: 'ElectViz: Election Data Visualization for Media',
+    subtitle: 'National Electoral Intelligence & Forecasting',
+    category: 'Analytics',
+    description:
+      'Led a team in developing an interactive Power BI dashboard analysing national and state-level election data, covering party performance, alliance dynamics, vote share, voter turnout, and seat distribution.',
+    problem:
+      'Massive scale multi-party electoral datasets requiring instant granular drill-down across states, constituencies, and vote types.',
+    tools: ['Power BI', 'DAX', 'Power Query', 'Statistical Modeling', 'Excel'],
+    outcome:
+      'Built data transformations and DAX-based KPIs for state, constituency, and party-level analysis, including winning margins and EVM versus postal voting comparisons.',
+    metrics: [
+      { label: 'Data Points', value: '543 Constituencies' },
+      { label: 'Engine', value: 'Power BI DAX' },
+      { label: 'Granularity', value: 'Constituency & EVM' },
+    ],
+    deepDive: {
+      methodology:
+        'Engineered star-schema relational data model with calculated DAX measures for vote-swing percentiles and alliance aggregation.',
+      architecture:
+        'Raw Election Commission Data -> Power Query ETL -> Star Schema Model -> Power BI Executive Dashboard.',
+      keyLearnings: [
+        'Advanced DAX matrix optimization for multi-tier visual filtering.',
+        'Storytelling for complex political and demographic trend forecasting.',
+      ],
+    },
+    image: project1,
     sourceUrl: 'https://github.com/varadsrivastavaofficial',
   },
 ];
@@ -285,23 +395,23 @@ export type Hobby = {
 
 export const HOBBIES_DATA: Hobby[] = [
   {
-    title: 'Karate',
+    title: 'Karate & Martial Arts',
     description:
-      'Dedicated martial artist training in Karate to cultivate discipline, precision, focus, and peak physical fitness.',
+      'Two-Time Continuous Runner-Up in Sangarsh Sports Fest (2025 & 2026). Cultivating discipline, physical conditioning, and mental resilience.',
     image: hobby4,
     tag: 'Martial Arts',
   },
   {
-    title: 'Boxing',
+    title: 'Boxing & Strategic Combat',
     description:
-      'Practicing boxing to sharpen reflexes, cardiovascular conditioning, and high-intensity strategic reaction.',
+      'Practicing boxing to develop split-second reflexes, tactical awareness under pressure, and peak cardiovascular stamina.',
     image: hobby2,
     tag: 'Combat Sports',
   },
   {
-    title: 'Video Creation & Motion Design',
+    title: 'Video Creation & Motion Graphics',
     description:
-      'Passionate about storytelling through video, synthesizing visual effects and dynamic motion graphics with Adobe After Effects.',
+      'Multiple-time winner in logo and video editing competitions. Passionate about visual storytelling using Adobe After Effects and Premiere Pro.',
     image: hobby3,
     tag: 'Creative Media',
   },
@@ -318,31 +428,31 @@ export type Education = {
 
 export const EDUCATION_DATA: Education[] = [
   {
-    title: 'B.S. Major in Economics (Minor in Data Science)',
-    institution: 'Indian Institute of Science Education and Research (IISER), Bhopal',
-    year: '2024 - Present',
-    grade: 'CPI: 7.68',
+    title: 'Major: B.S. in Economics, Minor: Data Science Engineering',
+    institution: 'Indian Institute of Science Education and Research - Bhopal',
+    year: '2024 – Present',
+    grade: 'GPA: 7.68/10',
     description:
-      'Rigorous undergraduate program emphasizing quantitative economic theory, econometrics, statistics, mathematical modeling, data structures, and empirical analytics.',
+      'Undergraduate program combining quantitative economic theory, econometrics, machine learning, probability & statistics, data structures, and financial data modeling.',
     image: education1,
   },
   {
-    title: 'Intermediate Class XII',
-    institution: 'Lucknow Public College, CISCE Board',
-    year: '2023',
-    grade: '95.50%',
+    title: 'Matriculation Class X (CISCE Board)',
+    institution: 'Lucknow Public College, Lucknow, India',
+    year: '2022 – 2023',
+    grade: '95.5/100',
     description:
-      'Graduated with top academic honors in Sciences and Mathematics under the CISCE Board curriculum.',
-    image: education2,
+      'Major: Physics, Chemistry, Mathematics and Computer Science. Completed with high academic distinction.',
+    image: education3,
   },
   {
-    title: 'Matriculation Class X',
-    institution: 'Lucknow Public College, CISCE Board',
-    year: '2021',
-    grade: '96.60%',
+    title: 'Intermediate Class XII (CISCE Board)',
+    institution: 'Lucknow Public College, Lucknow, India',
+    year: '2020 – 2021',
+    grade: '96.6/100',
     description:
-      'Completed Class X with distinction, demonstrating foundational excellence across analytical and scientific disciplines.',
-    image: education3,
+      'Major: Science, Mathematics and Computer Applications. Graduated with top academic honors.',
+    image: education2,
   },
 ];
 
@@ -356,27 +466,51 @@ export type Volunteering = {
 
 export const VOLUNTEERING_DATA: Volunteering[] = [
   {
-    title: 'Media Head',
+    title: 'Secretary',
     organization: 'Computing and Networking Council (CNC), IISER Bhopal',
-    period: 'Oct. 2025 - Present',
+    period: '2025 – Present',
     description:
-      'Leading digital communications, event promotion, and media campaigns for the student-led computing council.',
+      'Contributed to technical workshops, event coordination, creative design, and digital outreach for the institute\'s computing and networking community.',
     image: volunteering1,
+  },
+  {
+    title: 'Representative Council',
+    organization: 'Hostel Representative H-8, IISER Bhopal',
+    period: '2025 – Present',
+    description:
+      'Represented hostel residents in coordinating student concerns, communicating with administration, and supporting the smooth functioning of hostel facilities and activities.',
+    image: volunteering2,
   },
   {
     title: 'Vice President',
     organization: 'LPC Computer Club',
-    period: 'Mar. 2022 - Jun. 2023',
+    period: 'Mar 2021 – Jun 2023',
     description:
-      'Spearheaded coding workshops, technical exhibitions, and inter-school competitive programming initiatives.',
+      'Managed event budgets and logistics while coordinating activities and contributing to the strategic development of the club.',
+    image: volunteering3,
+  },
+  {
+    title: 'General Secretary',
+    organization: 'Calculathon, Mathematics Club, LPC',
+    period: 'Mar 2022 – Jun 2023',
+    description:
+      'Organised the flagship Calculathon event and workshops focused on advanced mathematical problem-solving and learning.',
+    image: volunteering1,
+  },
+  {
+    title: 'Coordinator',
+    organization: 'Gaming Club, LPC',
+    period: 'Mar 2021 – Jun 2023',
+    description:
+      'Coordinated gaming leagues and competitions, managing event planning and execution across hybrid sessions.',
     image: volunteering2,
   },
   {
-    title: 'Secretary',
-    organization: 'Calculathon (Mathematics Club), LPC',
-    period: 'Mar. 2022 - Jun. 2023',
+    title: 'Designer and Trainee',
+    organization: 'Armageddon, IISER Bhopal',
+    period: 'Jan 2025 – Mar 2025',
     description:
-      'Organized large-scale Olympiad-style math competitions and peer tutoring sessions for high school students.',
+      'Designed posters and standees, edited promotional videos, and supported event logistics and coordination.',
     image: volunteering3,
   },
 ];

@@ -230,8 +230,9 @@ export function HeroSection() {
           }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-6 backdrop-blur-md">
-            <Sparkles className="h-3.5 w-3.5" /> Economics & Data Science @ IISER Bhopal
+            <Sparkles className="h-3.5 w-3.5" /> Economics & Data Science Engineering @ IISER Bhopal
           </div>
+
 
           <h1
             className="font-headline text-5xl font-extrabold tracking-tight text-white sm:text-7xl md:text-8xl drop-shadow-2xl"
