@@ -37,9 +37,6 @@ export default function HobbiesPage() {
 
           <div className="max-w-3xl mx-auto text-center mb-16">
             <Reveal>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4 backdrop-blur-md">
-                <Flame className="h-3.5 w-3.5" /> Creative & Physical Pursuits
-              </div>
               <h1 className="font-headline text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
                 Hobbies & <span className="text-primary">Passions</span>
               </h1>

@@ -13,9 +13,6 @@ export function ExperienceSection() {
     >
       <div className="max-w-3xl mx-auto text-center mb-16">
         <Reveal>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4 backdrop-blur-md">
-            <Briefcase className="h-3.5 w-3.5" /> Career Journey
-          </div>
           <h2
             id="experience-heading"
             className="font-headline text-3xl sm:text-5xl font-bold tracking-tight text-foreground"

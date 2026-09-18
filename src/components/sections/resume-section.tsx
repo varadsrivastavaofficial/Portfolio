@@ -51,9 +51,6 @@ export function ResumeSection() {
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
               <div className="space-y-4 max-w-xl">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest backdrop-blur-md">
-                  <FileText className="h-3.5 w-3.5" /> Official Curriculum Vitae
-                </div>
                 <h2
                   id="resume-heading"
                   className="font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground"

@@ -43,9 +43,6 @@ export function AboutSection() {
           <div className="lg:col-span-7">
             <Reveal delay={100}>
               <div className="text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4 backdrop-blur-md">
-                  <TrendingUp className="h-3.5 w-3.5" /> Background & Profile
-                </div>
                 <h2
                   id="about-heading"
                   className="font-headline text-3xl sm:text-5xl font-bold tracking-tight text-foreground"

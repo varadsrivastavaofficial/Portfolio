@@ -97,9 +97,6 @@ export function QuantSandboxSection() {
         {/* Section Header */}
         <div className="text-center mb-14">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4 backdrop-blur-md">
-              <Cpu className="h-3.5 w-3.5" /> Interactive Quant Lab
-            </div>
             <h2 className="font-headline text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
               Quantitative <span className="text-primary">Sandbox</span>
             </h2>

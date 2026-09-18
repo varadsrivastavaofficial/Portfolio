@@ -227,9 +227,6 @@ export function ProjectsSection() {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4 backdrop-blur-md">
-              <FolderGit2 className="h-3.5 w-3.5" /> Research & Systems Portfolio
-            </div>
             <h2
               id="projects-heading"
               className="font-headline text-3xl sm:text-5xl font-bold tracking-tight text-foreground"
