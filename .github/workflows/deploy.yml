@@ -30,7 +30,7 @@ jobs:
         run: npm run build
         env:
           GITHUB_ACTIONS: 'true'
-          NEXT_PUBLIC_TWELVE_DATA_API_KEY: ${{ secrets.NEXT_PUBLIC_TWELVE_DATA_API_KEY }}
+          NEXT_PUBLIC_TWELVE_DATA_API_KEY: ${{ secrets.NEXT_PUBLIC_TWELVE_DATA_API_KEY || secrets.TWELVE_DATA_API_KEY }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
