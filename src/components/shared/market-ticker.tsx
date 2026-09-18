@@ -179,13 +179,15 @@ export function MarketTicker() {
   }, []);
 
   return (
-    <div className="w-full bg-card/80 border-b border-border/40 backdrop-blur-md overflow-hidden py-1.5 px-2 text-xs font-serif select-none">
+    <div className="w-full bg-[#0a0a0c]/90 border-b border-neutral-800/60 backdrop-blur-md overflow-hidden py-1.5 px-3 text-xs select-none">
       <div className="flex items-center">
-        {/* Terminal Live Badge */}
-        <div className="hidden sm:flex items-center gap-1.5 px-3 py-0.5 rounded bg-primary/10 text-primary border border-primary/25 font-bold uppercase tracking-wider text-[10px] shrink-0 mr-3">
-          <Activity className="h-3 w-3 animate-pulse text-primary" />
-          <span>Live Macro Feed</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+        {/* Natural Financial Terminal Label */}
+        <div className="hidden sm:flex items-center gap-2 px-2.5 py-0.5 rounded bg-neutral-900/90 border border-neutral-800 text-neutral-300 font-mono text-[11px] tracking-wider shrink-0 mr-4">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
+          </span>
+          <span className="font-medium text-neutral-300">MARKETS</span>
         </div>
 
         {/* Scrolling Ticker Stream */}
@@ -194,13 +196,13 @@ export function MarketTicker() {
             {[...tickers, ...tickers].map((t, idx) => (
               <div
                 key={`${t.symbol}-${idx}`}
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors cursor-default"
+                className="inline-flex items-center gap-2 text-neutral-400 hover:text-neutral-200 transition-colors cursor-default"
               >
-                <span className="font-bold text-foreground">{t.symbol}</span>
-                <span className="text-neutral-300 dark:text-neutral-400 text-[11px] font-mono">{t.price}</span>
+                <span className="font-semibold text-neutral-200 text-xs">{t.symbol}</span>
+                <span className="text-neutral-300 text-[11px] font-mono">{t.price}</span>
                 <span
-                  className={`inline-flex items-center text-[11px] font-semibold ${
-                    t.isPositive ? 'text-emerald-500 dark:text-emerald-400' : 'text-rose-500 dark:text-rose-400'
+                  className={`inline-flex items-center text-[11px] font-mono font-medium ${
+                    t.isPositive ? 'text-emerald-400' : 'text-rose-400'
                   }`}
                 >
                   {t.isPositive ? (
